@@ -30,6 +30,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
+    <!-- CABECERA CON MENÚ MÓVIL -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -37,18 +38,39 @@
                 <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
             </div>
             
+            <!-- Menú de escritorio -->
             <nav class="hidden md:flex gap-8 font-medium text-gray-600">
                 <a href="#tarifas" class="hover:text-padel-600 transition-colors">Tarifas</a>
                 <a href="#sobre-mi" class="hover:text-padel-600 transition-colors">Sobre Mí & Metodología</a>
                 <a href="#titulaciones" class="hover:text-padel-600 transition-colors">Acreditaciones</a>
                 <a href="#opiniones" class="hover:text-padel-600 transition-colors">Opiniones</a>
-                <a href="blog.html" class="hover:text-padel-600 transition-colors">Blog</a>
+                <a href="blog.html" class="hover:text-padel-600 transition-colors font-bold text-padel-900">Blog</a>
             </nav>
 
-            <a href="https://wa.me/34622041911" target="_blank" class="bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md flex items-center gap-2">
-                <i data-lucide="message-circle" class="h-5 w-5"></i>
-                WhatsApp
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/34622041911" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                </a>
+                
+                <!-- Botón Menú Móvil -->
+                <button id="btn-menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
+                    <i data-lucide="menu" class="h-7 w-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable (Oculto por defecto) -->
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 flex flex-col space-y-2">
+                <a href="#tarifas" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Tarifas</a>
+                <a href="#sobre-mi" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Sobre Mí & Metodología</a>
+                <a href="#titulaciones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Acreditaciones</a>
+                <a href="#opiniones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Opiniones</a>
+                <a href="blog.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Ir al Blog</a>
+                <a href="https://wa.me/34622041911" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-500 rounded-xl text-center flex justify-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                </a>
+            </div>
         </div>
     </header>
 
@@ -286,6 +308,53 @@
             </div>
         </section>
 
+        <!-- SECCIÓN BLOG EN HOME -->
+        <section id="blog-home" class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Últimos consejos en el Blog</h2>
+                        <p class="text-gray-600 text-lg">Aprende técnica, táctica y metodología fuera de la pista.</p>
+                    </div>
+                    <a href="blog.html" class="hidden md:flex items-center gap-2 text-padel-600 font-bold hover:text-padel-900 transition-colors">
+                        Ver todos los artículos <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Artículo 1 Mini -->
+                    <a href="por-que-no-ensenar-contrapared-padel.html" class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group flex flex-col sm:flex-row">
+                        <div class="w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                            <img src="aprender-padel-valencia.avif" alt="Contrapared pádel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 md:p-8 w-full sm:w-3/5 flex flex-col justify-center">
+                            <span class="text-padel-600 text-xs font-bold uppercase tracking-widest mb-2 block">Técnica</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">Por qué NUNCA enseño la contrapared en iniciación</h3>
+                            <p class="text-gray-500 text-sm">Descubre por qué prohíbo este golpe a mis alumnos y cómo evitar la pereza en pista.</p>
+                        </div>
+                    </a>
+
+                    <!-- Artículo 2 Mini -->
+                    <a href="clases-padel-valencia-grupo-individual.html" class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group flex flex-col sm:flex-row">
+                        <div class="w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                            <img src="grupos-padel-valencia.avif" alt="Clases grupo pádel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 md:p-8 w-full sm:w-3/5 flex flex-col justify-center">
+                            <span class="text-padel-600 text-xs font-bold uppercase tracking-widest mb-2 block">Metodología</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">¿Es mejor entrenar en grupo, pareja o individual?</h3>
+                            <p class="text-gray-500 text-sm">Destripamos los pros y contras de cada formato para mejorar tu nivel sin estancarte.</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-10 text-center md:hidden">
+                    <a href="blog.html" class="inline-flex items-center gap-2 bg-white border-2 border-padel-600 text-padel-900 px-8 py-3 rounded-full font-bold hover:bg-padel-600 hover:text-white transition-all shadow-sm">
+                        Ver todos los artículos <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- FOOTER ACTUALIZADO CON REDES Y MAPS -->
         <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -343,6 +412,23 @@
 
     <script>
         lucide.createIcons();
+        
+        // Lógica del menú móvil
+        const btnMenu = document.getElementById('btn-menu');
+        const menuMovil = document.getElementById('menu-movil');
+        const linksMovil = document.querySelectorAll('.link-movil');
+
+        // Abrir/Cerrar al tocar el icono hamburguesa
+        btnMenu.addEventListener('click', () => {
+            menuMovil.classList.toggle('hidden');
+        });
+
+        // Cerrar automáticamente al hacer clic en un enlace
+        linksMovil.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMovil.classList.add('hidden');
+            });
+        });
     </script>
 </body>
 </html>
