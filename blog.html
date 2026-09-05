@@ -3,101 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3 Ejercicios Clave para Multiplicar la Potencia de tu Remate | Manu - PadelValencia</title>
-    <meta name="description" content="Descubre cómo mejorar tu smash y ganar potencia desde el revés con ejercicios de movilidad y preparación física. Por Manu, tu monitor de pádel en Valencia.">
+    <title>Blog de Pádel | Consejos, Técnica y Táctica por Manu Carrilero</title>
+    <meta name="description" content="Aprende a jugar mejor al pádel con los consejos de Manu Carrilero, Licenciado en CAFE/CAFD y entrenador en Valencia.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' }
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
     </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
-    
+
+    <!-- CABECERA -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
                 <i data-lucide="tennis" class="h-8 w-8 text-padel-600"></i>
                 <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
             </a>
             <a href="index.html" class="text-gray-500 hover:text-padel-600 font-medium flex items-center gap-1">
-                <i data-lucide="arrow-left" class="h-4 w-4"></i> Volver a inicio
+                <i data-lucide="arrow-left" class="h-4 w-4"></i> Volver a la web
             </a>
         </div>
     </header>
 
-    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <header class="p-8 md:p-12 pb-8 border-b border-gray-100">
-                <div class="flex items-center gap-2 text-padel-600 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span>Preparación Física</span>
-                    <span>•</span>
-                    <span>Técnica</span>
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">El Blog de la Pista</h1>
+            <p class="text-xl text-gray-600">Reflexiones, técnica y consejos de un CAFE/CAFD para llevar tu pádel al siguiente nivel.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- ARTÍCULO 1 -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="aprender-padel-valencia.avif" alt="Clases de pádel en Valencia sin contrapared" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Técnica</div>
                 </div>
-                <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-                    3 Ejercicios Clave para Multiplicar la Potencia de tu Remate (Smash)
-                </h1>
-                <div class="flex items-center gap-4 text-gray-600">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="manu-frontal.png" alt="Manu Carrilero" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Manu Carrilero</p>
-                        <p class="text-sm">Profesor de Pádel en Valencia • <time datetime="2026-08-30">30 de Agosto, 2026</time></p>
-                    </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors">
+                        <a href="articulo-contrapared.html">El golpe de pádel que NUNCA enseño en iniciación (y por qué deberías evitarlo)</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow">Las paredes son nuestro mejor aliado, pero hay un recurso que vuelve perezosos a los jugadores y arruina su posicionamiento en la pista.</p>
+                    <a href="articulo-contrapared.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors">
+                        Leer artículo <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
                 </div>
-            </header>
+            </article>
 
-            <div class="p-8 md:p-12 text-gray-600">
-                <p class="text-xl leading-relaxed mb-8">
-                    Uno de los errores más comunes que veo a diario en las pistas es intentar generar toda la potencia del remate únicamente con el brazo. Si juegas en el revés, sabes que un buen smash es vital para definir el punto, pero la fuerza real nace de la preparación física y la biomecánica de todo el cuerpo.
-                </p>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">1. Movilidad Torácica y Hombros</h2>
-                <p class="mb-6 text-lg">
-                    Antes de entrar a pista o empuñar tu pala, necesitas amplitud de movimiento. Un ejercicio indispensable que siempre recomiendo es utilizar el foam roller para extensiones torácicas. Esto libera la zona dorsal y permite que tu hombro tenga el rango completo necesario para contactar la bola en el punto más alto.
-                </p>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">2. Transferencia de Fuerza: Sentadilla Búlgara</h2>
-                <p class="mb-6 text-lg">
-                    La potencia del smash sube desde las piernas. Incorporar sentadillas búlgaras a tu rutina de gimnasio fortalece el tren inferior de forma unilateral. Al tener piernas fuertes, la transferencia de peso de atrás hacia adelante en el momento del impacto se vuelve mucho más explosiva y estable.
-                </p>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">3. El Trabajo de Tríceps y Core</h2>
-                <p class="mb-6 text-lg">
-                    El "latigazo" final requiere un tríceps fuerte y un core sólido como una roca. Prueba añadir el press francés explosivo y los sit-ups en banco a tus entrenamientos. Mantener una postura sólida en el aire (o bien apoyado) evitará que pierdas inercia al golpear y protegerá tu zona lumbar.
-                </p>
-
-                <div class="bg-padel-50 p-8 rounded-xl border border-padel-100 my-10">
-                    <h3 class="text-lg font-bold text-padel-900 mb-3 flex items-center gap-2">
-                        <i data-lucide="lightbulb" class="h-6 w-6 text-padel-accent"></i> Mi metodología en pista
-                    </h3>
-                    <p class="text-padel-900 text-lg">
-                        Para pulir este golpe, en mis clases utilizo la máquina lanzapelotas profesional. Esto nos permite repetir el globo exactamente a la misma altura y velocidad de forma constante, para que puedas interiorizar la biomecánica del remate sin distracciones, mecanizando el movimiento perfecto antes de aplicarlo en situaciones reales de partido.
-                    </p>
+            <!-- ARTÍCULO 2 -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="grupos-padel-valencia.avif" alt="Alumnas en grupo de clases de pádel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Metodología</div>
                 </div>
-            </div>
-            
-            <footer class="bg-gray-50 p-8 md:p-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                    <h3 class="font-bold text-gray-900 mb-2 text-xl">¿Quieres corregir tus errores en pista?</h3>
-                    <p class="text-gray-600">Reserva tu clase particular o en grupo en Valencia y Paterna.</p>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors">
+                        <a href="articulo-grupos-padel.html">¿Cuántos alumnos debe haber en una clase de pádel? El mito de los 4 jugadores</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow">Descubre por qué las dinámicas de 3 a 5 personas son la opción más interesante y rápida para aprender situaciones reales de partido.</p>
+                    <a href="articulo-grupos-padel.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors">
+                        Leer artículo <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
                 </div>
-                <a href="https://wa.me/34622041911" class="shrink-0 inline-flex items-center gap-2 bg-padel-600 text-white px-8 py-4 rounded-full font-bold hover:bg-padel-900 transition-colors shadow-md">
-                    <i data-lucide="calendar" class="h-5 w-5"></i>
-                    Reservar una clase
-                </a>
-            </footer>
-        </article>
+            </article>
+        </div>
     </main>
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="bg-gray-950 text-gray-400 py-8 border-t-8 border-padel-accent mt-auto text-center">
+        <p class="text-sm">© Manu Carrilero - Entrenador de Pádel en Valencia</p>
+    </footer>
+
     <script>lucide.createIcons();</script>
 </body>
 </html>
