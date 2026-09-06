@@ -3,158 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí | Manu Carrilero - Profesor de Pádel en Valencia</title>
-    <meta name="description" content="Conoce la trayectoria de Manu Carrilero: Licenciado en Ciencias del Deporte (CAFE/CAFD), cofundador de Tuentrenador y profesor de pádel certificado.">
+    <title>Sobre Mí | Manu Carrilero - Entrenador de Pádel en Valencia</title>
+    <meta name="description" content="Conoce la trayectoria de Manu Carrilero: Licenciado en CAFE/CAFD, Monitor APA y especialista en biomecánica aplicada al pádel en Valencia.">
     
+    <!-- Etiquetas SEO Canónicas y OpenGraph -->
+    <link rel="canonical" href="https://clasespadelvalencia.com/sobre-mi.html" />
+    <meta property="og:title" content="Sobre Mí | Manu Carrilero">
+    <meta property="og:description" content="Licenciado en Ciencias del Deporte y Monitor APA. Más de una década dedicada a la enseñanza del pádel.">
+    <meta property="og:image" content="https://clasespadelvalencia.com/manu-carrilero-padel-valencia.avif">
+    <meta property="og:url" content="https://clasespadelvalencia.com/sobre-mi.html">
+    <meta property="og:type" content="profile">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' }
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
     </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
-    
-    <!-- CABECERA -->
+
+    <!-- CABECERA CON MENÚ MÓVIL (Enlaces absolutos a la home) -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
                 <i data-lucide="tennis" class="h-8 w-8 text-padel-600"></i>
                 <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
             </a>
-            <a href="index.html" class="text-gray-500 hover:text-padel-600 font-medium flex items-center gap-1">
-                <i data-lucide="arrow-left" class="h-4 w-4"></i> Volver a inicio
-            </a>
+            
+            <nav class="hidden md:flex gap-8 font-medium text-gray-600">
+                <a href="index.html#tarifas" class="hover:text-padel-600 transition-colors">Tarifas</a>
+                <a href="sobre-mi.html" class="hover:text-padel-600 transition-colors font-bold text-padel-900">Sobre Mí & Metodología</a>
+                <a href="index.html#titulaciones" class="hover:text-padel-600 transition-colors">Acreditaciones</a>
+                <a href="index.html#opiniones" class="hover:text-padel-600 transition-colors">Opiniones</a>
+                <a href="blog.html" class="hover:text-padel-600 transition-colors">Blog</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/34622041911" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                </a>
+                
+                <button id="btn-menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
+                    <i data-lucide="menu" class="h-7 w-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 flex flex-col space-y-2">
+                <a href="index.html#tarifas" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Tarifas</a>
+                <a href="sobre-mi.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Sobre Mí & Metodología</a>
+                <a href="index.html#titulaciones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Acreditaciones</a>
+                <a href="index.html#opiniones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Opiniones</a>
+                <a href="blog.html" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Blog</a>
+            </div>
         </div>
     </header>
 
     <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
-        <!-- ENCABEZADO PERFIL -->
-        <div class="flex flex-col md:flex-row items-center gap-10 mb-16">
-            <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 relative">
-                <img src="manu-carrilero-padel-valencia.avif" alt="Manu Carrilero Perfil" class="w-full h-full object-cover rounded-full shadow-xl border-4 border-white z-10 relative">
-                <div class="absolute inset-0 bg-padel-accent rounded-full translate-x-4 translate-y-4 z-0 opacity-20"></div>
-            </div>
-            <div>
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Deportista, Docente <br>y Entrenador.</h1>
-                <p class="text-xl text-padel-600 font-semibold mb-4">Licenciado en CAFE/CAFD y Co-fundador de Tuentrenador.</p>
-                <div class="flex gap-4">
-                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-blue-600 transition-colors">
-                        <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
-                    </a>
-                    <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-pink-600 transition-colors">
-                        <i data-lucide="instagram" class="h-5 w-5"></i> Instagram
-                    </a>
-                </div>
-            </div>
+        <div class="mb-10 text-center">
+            <span class="text-padel-600 font-bold tracking-widest uppercase text-sm mb-4 block">Sobre Mí</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">Más de 20 años en la pista. <br>Una década dedicada a enseñarte.</h1>
         </div>
 
-        <!-- CONTENIDO BIOGRÁFICO -->
-        <article class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 prose prose-lg prose-gray max-w-none">
-            
-            <p class="text-xl leading-relaxed text-gray-600 mb-8">
-                El deporte siempre ha sido el eje central de mi vida. Más allá de mi pasión por la pista y los más de 20 años empuñando una pala, mi vocación siempre ha sido entender el cuerpo humano, su biomecánica y cómo optimizar el rendimiento de forma segura.
-            </p>
+        <img src="manu-carrilero-padel-valencia.avif" alt="Manu Carrilero, profesor de pádel en Valencia" class="w-full h-[400px] object-cover rounded-3xl shadow-md mb-12">
 
-            <h3 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Formación Académica Integral</h3>
-            <p class="mb-6">
-                Para mí, dar clases de pádel o entrenar a un deportista no consiste solo en lanzar bolas desde una cesta. Requiere una base científica y anatómica. Por eso me licencié en <strong>Ciencias de la Actividad Física y del Deporte (CAFE/CAFD)</strong> por la Universidad Católica de Valencia y la Universidad de Valencia.
-            </p>
-            <p class="mb-6">
-                Buscando siempre profundizar en mis conocimientos, completé mi formación con un <strong>Máster en Investigación en Ciencias del Deporte</strong> y un <strong>Máster en Formación del Profesorado</strong> (especialidad en Educación Secundaria), lo que me ha otorgado herramientas pedagógicas fundamentales para transmitir conocimientos de forma clara a alumnos de cualquier edad.
-            </p>
+        <article class="text-lg text-gray-700 space-y-6 leading-relaxed">
+            <p>Soy Manu Carrilero y llevo el deporte y la docencia en el ADN. Llevo más de dos décadas empuñando una pala y más de 10 años dedicados profesionalmente a que mis alumnos saquen su máximo potencial en la pista.</p>
 
-            <h3 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Más Allá del Pádel: Tuentrenador</h3>
-            <p class="mb-6">
-                Mi visión integral de la preparación física me llevó a ser <strong>co-fundador de Tuentrenador</strong> en Valencia, un proyecto donde trabajo estrechamente junto a mi equipo abordando el entrenamiento personal desde todas sus vertientes. 
-            </p>
-            <p class="mb-6">
-                Además de las pistas de pádel, tengo amplia experiencia como entrenador personal, instructor de natación certificado por la Real Federación Española de Natación y especialista en rehabilitación acuática. Esta polivalencia me permite ayudar a mis alumnos de pádel a prevenir lesiones, fortalecer articulaciones específicas y, en caso de lesión previa, adaptar los entrenamientos en pista para una recuperación activa y segura.
-            </p>
+            <p>Mi objetivo no es que simplemente "pases la bola". Mi meta es que entiendas el juego. Como <strong>Licenciado en Ciencias de la Actividad Física y del Deporte (2007-2012)</strong>, abordo el pádel desde la ciencia, la biomecánica y la progresión estructurada.</p>
 
-            <h3 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Mi Filosofía en la Pista</h3>
-            <p class="mb-6">
-                Cuando entras en la pista de Elite 22 Paterna conmigo, mi objetivo es sumar toda mi experiencia académica, mi experiencia en Tuentrenador y mi certificación como <strong>Monitor de Pádel por la APA y MM Academy</strong> para ofrecerte la mejor sesión posible. Uso tecnología como lanzapelotas y análisis de vídeo porque creo en el perfeccionamiento mecánico y táctico continuo. 
-            </p>
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Formación que marca la diferencia</h2>
+            <p>La pasión por el pádel es fundamental, pero en la pista, la técnica y la base académica son las que evitan que te lesiones y te estanques. A lo largo de mi carrera, me he obsesionado con mantener mi formación actualizada:</p>
             
-            <div class="bg-padel-50 p-6 rounded-2xl border border-padel-100 mt-10">
-                <p class="text-padel-900 font-medium italic m-0">
-                    "Mi mayor satisfacción es ver a mis alumnos evolucionar técnica y físicamente, comprendiendo el juego y disfrutando cada minuto del partido sin riesgo de lesiones."
-                </p>
-            </div>
+            <ul class="space-y-4 list-disc pl-6 font-medium text-gray-800">
+                <li><strong>Monitor APA (2013):</strong> Certificación oficial avalada por la Asociación de Profesionales de Pádel, bajo la tutela de referentes mundiales como Jorge Nicolini y Máximo Castellote.</li>
+                <li><strong>MM Academy Coach (2025):</strong> Certificación técnica y metodológica respaldada por Manu Martín, aplicando los métodos más vanguardistas del pádel actual.</li>
+                <li><strong>Máster en Docencia e Investigación Deportiva:</strong> Para asegurar que los conceptos teóricos se transmiten de forma pedagógica y efectiva a cada alumno.</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Mi filosofía de trabajo en TuEntrenador</h2>
+            <p>Como co-fundador de TuEntrenador y jugador habitual en el lado del revés, sé perfectamente lo que necesitas en la pista. En mis clases combinamos:</p>
             
+            <ul class="space-y-4 list-none font-medium text-gray-800">
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-6 w-6"></i> <strong>Análisis biomecánico:</strong> Corrigiendo errores desde la empuñadura hasta la transferencia de peso.</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-6 w-6"></i> <strong>Prevención de lesiones:</strong> Trabajando tu físico para que soporte tu técnica.</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-6 w-6"></i> <strong>Tecnología aplicada:</strong> Con uso intensivo de vídeo feedback y máquina lanzapelotas para asentar automatismos.</li>
+            </ul>
+
+            <p class="mt-8">Da igual si juegas en Valencia, en Paterna o si necesitas que analice tu técnica online. Si quieres dejar los vicios atrás y construir un pádel sólido, nos vemos en la pista.</p>
         </article>
-        
-        <div class="text-center mt-12">
-            <a href="https://wa.me/34622041911" target="_blank" class="inline-flex items-center gap-2 bg-padel-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-padel-900 transition-colors shadow-lg">
-                <i data-lucide="message-circle" class="h-6 w-6"></i> Contactar por WhatsApp
+
+        <!-- MÓDULO CTA -->
+        <div class="mt-16 text-center border-t border-gray-100 pt-12">
+            <a href="https://wa.me/34622041911" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
+                <i data-lucide="message-circle" class="h-6 w-6"></i> Escríbeme y reserva tu plaza
             </a>
         </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-           <!-- Primera columna del Footer -->
-                <div>
-                    <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
-                    
-                    <!-- Enlace de Instagram DESTACADO -->
-                    <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="inline-flex items-center gap-2 text-padel-500 hover:text-white font-bold mb-4 transition-colors group">
-                        <i data-lucide="instagram" class="h-5 w-5 group-hover:scale-110 transition-transform"></i> @manucarrilero
-                    </a>
-                    
-                    <p class="text-sm mb-6 text-gray-400">Llevando tu nivel de pádel al siguiente escalón. Clases técnicas, tácticas y dinámicas.</p>
-                    
-                    <!-- Otros enlaces sociales -->
-                    <div class="flex gap-4">
-                        <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
-                            <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
-                        </a>
-                    </div>
-                </div>
-            
+            <div>
+                <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
+                <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="inline-flex items-center gap-2 text-padel-500 hover:text-white font-bold mb-4 transition-colors group">
+                    <i data-lucide="instagram" class="h-5 w-5 group-hover:scale-110 transition-transform"></i> @manucarrilero
+                </a>
+                <p class="text-sm mb-6 text-gray-400">Llevando tu nivel de pádel al siguiente escalón. Clases técnicas, tácticas y dinámicas.</p>
+            </div>
             <div>
                 <h4 class="text-white font-bold mb-4 text-lg">Ubicación de Entrenamiento</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-start gap-3">
                         <i data-lucide="map-pin" class="h-5 w-5 text-padel-500 shrink-0 mt-1"></i> 
-                        <span>
-                            <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
-                                <strong>Elite 22 Paterna</strong><br>Valencia, España<br>
-                                <span class="text-padel-500 underline">Ver en Google Maps</span>
-                            </a>
-                        </span>
+                        <span><a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors"><strong>Elite 22 Paterna</strong><br>Valencia, España<br><span class="text-padel-500 underline">Ver en Google Maps</span></a></span>
                     </li>
                 </ul>
             </div>
-
             <div>
                 <h4 class="text-white font-bold mb-4 text-lg">Contacto Directo</h4>
                 <ul class="space-y-3 text-sm">
-                    <li class="flex items-center gap-3">
-                        <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
-                    </li>
-                    <li>
-                        <a href="https://wa.me/34622041911" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
-                            <i data-lucide="message-circle" class="h-4 w-4"></i> Escríbeme por WhatsApp
-                        </a>
-                    </li>
+                    <li class="flex items-center gap-3"><i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11</li>
+                    <li><a href="https://wa.me/34622041911" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2"><i data-lucide="message-circle" class="h-4 w-4"></i> Escríbeme por WhatsApp</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
+    <!-- Script optimizado y diferido -->
     <script>
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            const btnMenu = document.getElementById('btn-menu');
+            const menuMovil = document.getElementById('menu-movil');
+            const linksMovil = document.querySelectorAll('.link-movil');
+
+            if(btnMenu && menuMovil) {
+                btnMenu.addEventListener('click', () => {
+                    menuMovil.classList.toggle('hidden');
+                });
+                linksMovil.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuMovil.classList.add('hidden');
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
