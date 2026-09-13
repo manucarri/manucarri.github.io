@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La empuñadura en pádel: El "error invisible" | Manu Carrilero</title>
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
     
+    <title>La empuñadura en pádel: El "error invisible" | Manu Carrilero</title>
     <meta name="description" content="¿Estancado en tu nivel de pádel? El problema podría estar en tu mano. Descubre por qué la empuñadura continental es innegociable y cómo corregir tus errores.">
+    
+    <!-- Etiquetas SEO Canónicas y OpenGraph -->
+    <link rel="canonical" href="https://clasespadelvalencia.com/empunadura-continental-padel-errores.html" />
+    <meta property="og:title" content="La empuñadura en pádel: El error invisible | Manu Carrilero">
+    <meta property="og:description" content="Descubre por qué la empuñadura continental es innegociable y cómo corregir tus errores para subir de nivel.">
+    <meta property="og:image" content="https://clasespadelvalencia.com/monitor-padel-valencia.avif">
+    <meta property="og:url" content="https://clasespadelvalencia.com/empunadura-continental-padel-errores.html">
+    <meta property="og:type" content="article">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
     </script>
@@ -112,8 +121,8 @@
 
         <!-- MÓDULO CTA -->
         <div class="mt-16 text-center border-t border-gray-100 pt-12">
-            <a href="https://wa.me/34622041911?text=Hola%20Manu,%20quiero%20corregir%20mi%20base%20y%20subir%20de%20nivel.%20¿Me%20informas%20sobre%20el%20programa%201:1?" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
-                <i data-lucide="message-circle" class="h-6 w-6"></i> Corrige tu base y sube de nivel (Programa 1:1)
+            <a href="https://wa.me/34622041911?text=Hola%20Manu,%20quiero%20corregir%20mi%20base%20y%20subir%20de%20nivel.%20¿Me%20informas%20sobre%20tus%20clases%20de%20pádel?" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
+                <i data-lucide="message-circle" class="h-6 w-6"></i> Reserva tu clase de pádel y corrige tu técnica
             </a>
         </div>
     </main>
@@ -122,10 +131,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
                 <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
-                <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="inline-flex items-center gap-2 text-padel-500 hover:text-white font-bold mb-4 transition-colors group">
-                    <i data-lucide="instagram" class="h-5 w-5 group-hover:scale-110 transition-transform"></i> @manucarrilero
-                </a>
-                <p class="text-sm mb-6 text-gray-400">Llevando tu nivel de pádel al siguiente escalón. Clases técnicas, tácticas y dinámicas.</p>
+                <div class="flex gap-4 flex-wrap mt-4">
+                    <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="text-padel-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-bold">
+                        <i data-lucide="instagram" class="h-5 w-5"></i> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
+                        <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
+                    </a>
+                </div>
+                <p class="text-sm mb-6 mt-4 text-gray-400">Llevando tu nivel de pádel al siguiente escalón. Clases técnicas, tácticas y dinámicas.</p>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-4 text-lg">Ubicación de Entrenamiento</h4>
@@ -146,6 +160,28 @@
         </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            const btnMenu = document.getElementById('btn-menu');
+            const menuMovil = document.getElementById('menu-movil');
+            const linksMovil = document.querySelectorAll('.link-movil');
+
+            if(btnMenu && menuMovil) {
+                btnMenu.addEventListener('click', () => {
+                    menuMovil.classList.toggle('hidden');
+                });
+
+                linksMovil.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuMovil.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
