@@ -63,6 +63,16 @@
         .hero-pattern { background-color: #14532d; background-image: radial-gradient(#16a34a 1px, transparent 1px); background-size: 24px 24px; }
         .smooth-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HT4WB8DKEV');
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
@@ -86,7 +96,7 @@
                     <span class="text-xl">🇪🇸</span> Versión en Español
                 </a>
                 
-                <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
+                <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'header_escritorio_en'});" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
                     <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
                 </a>
                 
@@ -106,7 +116,7 @@
                 <a href="#certifications" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Certifications</a>
                 <a href="#reviews" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Reviews</a>
                 <a href="blog-en.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Go to Blog</a>
-                <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-500 rounded-xl text-center flex justify-center gap-2">
+                <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'menu_movil_en'});" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-500 rounded-xl text-center flex justify-center gap-2">
                     <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
                 </a>
             </div>
@@ -134,7 +144,7 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20interested%20in%20booking%20my%20first%20padel%20lesson" target="_blank" class="bg-padel-accent text-padel-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors text-center shadow-lg flex items-center justify-center gap-2">
+                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20interested%20in%20booking%20my%20first%20padel%20lesson" onclick="gtag('event', 'clic_whatsapp', {'origen': 'hero_portada_en'});" target="_blank" class="bg-padel-accent text-padel-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors text-center shadow-lg flex items-center justify-center gap-2">
                             Book my first lesson
                         </a>
                         <a href="#pricing" class="bg-transparent border-2 border-green-400 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-800 transition-colors text-center">
@@ -172,7 +182,7 @@
                             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> On-court video feedback</li>
                             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Maximum intensity</li>
                         </ul>
-                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20interested%20in%20a%20private%20padel%20lesson" class="block w-full bg-padel-900 text-white text-center py-4 rounded-xl font-bold hover:bg-padel-600 transition-colors">Check availability</a>
+                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20interested%20in%20a%20private%20padel%20lesson" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_individual_en'});" class="block w-full bg-padel-900 text-white text-center py-4 rounded-xl font-bold hover:bg-padel-600 transition-colors">Check availability</a>
                     </div>
 
                     <div class="bg-padel-900 rounded-3xl p-8 border border-padel-800 shadow-2xl flex flex-col relative transform md:-translate-y-4">
@@ -188,7 +198,7 @@
                             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5"></i> Tactical positioning</li>
                             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5"></i> Dynamic drills</li>
                         </ul>
-                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20we%20are%20interested%20in%20a%20semi-private%20padel%20lesson" class="block w-full bg-padel-accent text-padel-900 text-center py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors shadow-lg">Book now</a>
+                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20we%20are%20interested%20in%20a%20semi-private%20padel%20lesson" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_pareja_en'});" class="block w-full bg-padel-accent text-padel-900 text-center py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors shadow-lg">Book now</a>
                     </div>
 
                     <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200 hover:shadow-xl transition-shadow flex flex-col">
@@ -203,7 +213,7 @@
                             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Match dynamics</li>
                             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Lots of fun</li>
                         </ul>
-                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20interested%20in%20joining%20a%20small%20padel%20group" class="block w-full bg-gray-200 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-300 transition-colors">Ask for availability</a>
+                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20interested%20in%20joining%20a%20small%20padel%20group" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_grupo_en'});" class="block w-full bg-gray-200 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-300 transition-colors">Ask for availability</a>
                     </div>
                 </div>
             </div>
@@ -385,7 +395,7 @@
                             <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
                         </li>
                         <li>
-                            <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
+                            <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer_en'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
                                 <i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp
                             </a>
                         </li>
