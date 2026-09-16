@@ -52,9 +52,17 @@
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">Guía de Iniciación al Pádel: Fundamentos y Reglas Básicas</h1>
         </div>
 
-        <!-- Vídeo Incrustado -->
-        <div class="relative pb-[56.25%] h-0 mb-12 overflow-hidden rounded-3xl shadow-xl border-4 border-white bg-black">
-            <iframe src="https://www.youtube.com/embed/-QXE5yszQzs" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Contenedor Responsive para el vídeo de YouTube -->
+        <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-xl mb-12 border-4 border-white bg-black">
+            <iframe 
+                class="w-full h-full" 
+                src="https://www.youtube.com/embed/-QXE5yszQzs" 
+                title="Guía de Iniciación al Pádel" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
         </div>
 
         <article class="text-lg text-gray-700 space-y-6 leading-relaxed">
@@ -162,8 +170,8 @@
 
             <div class="bg-gray-900 text-green-400 p-6 rounded-2xl font-mono text-sm overflow-x-auto whitespace-pre my-8 shadow-inner border border-gray-800">
                    GOLPE DEL RIVAL
-                          │
-                          ▼
+                         │
+                         ▼
             ¿Toca primero el suelo de tu campo?
                ├── NO ──► OUT (Punto para ti si va directo al cristal)
                │
