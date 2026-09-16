@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,6 +24,16 @@
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HT4WB8DKEV');
     </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen overflow-x-hidden w-full">
@@ -211,7 +221,7 @@
         </article>
 
         <div class="mt-16 text-center border-t border-gray-100 pt-12">
-            <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20have%20read%20your%20beginner%20guide%20and%20I%20want%20to%20start%20taking%20padel%20lessons" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
+            <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20have%20read%20your%20beginner%20guide%20and%20I%20want%20to%20start%20taking%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'cta_articulo_guia_en'});" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
                 <i data-lucide="message-circle" class="h-6 w-6"></i> Book your first padel lesson
             </a>
         </div>
@@ -244,7 +254,7 @@
                 <h4 class="text-white font-bold mb-4 text-lg">Direct Contact</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-center gap-3"><i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11</li>
-                    <li><a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2"><i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp</a></li>
+                    <li><a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer_articulo_guia_en'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2"><i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp</a></li>
                 </ul>
             </div>
         </div>
