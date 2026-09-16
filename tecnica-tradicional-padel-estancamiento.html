@@ -21,6 +21,16 @@
     <script>
         tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HT4WB8DKEV');
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
@@ -146,7 +156,7 @@
         <div class="mt-16 text-center border-t border-gray-100 pt-12">
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Da el paso y desata tu verdadero juego</h3>
             <p class="text-gray-600 mb-8 max-w-2xl mx-auto">La vida es un desafío, consíguelo. Si estás cansado de gastar dinero en torneos y material sin ver una evolución real, y si quieres que tu cuerpo aguante los partidos, ha llegado el momento de entrenar con sentido.</p>
-            <a href="https://wa.me/34622041911?text=Hola%20Manu,%20quiero%20mejorar%20mi%20juego%20aéreo%20y%20dejar%20de%20tener%20molestias.%20¿Me%20informas?" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
+            <a href="https://wa.me/34622041911?text=Hola%20Manu,%20quiero%20mejorar%20mi%20juego%20aéreo%20y%20dejar%20de%20tener%20molestias.%20¿Me%20informas?" onclick="gtag('event', 'clic_whatsapp', {'origen': 'cta_articulo_tecnica'});" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
                 <i data-lucide="message-circle" class="h-6 w-6"></i> Reserva tu clase y corrige tu técnica
             </a>
         </div>
@@ -174,7 +184,7 @@
                 <h4 class="text-white font-bold mb-4 text-lg">Contacto Directo</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-center gap-3"><i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11</li>
-                    <li><a href="https://wa.me/34622041911" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2"><i data-lucide="message-circle" class="h-4 w-4"></i> Escríbeme por WhatsApp</a></li>
+                    <li><a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer_articulo_tecnica'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2"><i data-lucide="message-circle" class="h-4 w-4"></i> Escríbeme por WhatsApp</a></li>
                 </ul>
             </div>
         </div>
