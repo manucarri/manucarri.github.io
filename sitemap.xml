@@ -1,31 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- PÁGINAS PRINCIPALES (ES) -->
   <url>
     <loc>https://clasespadelvalencia.com/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/sobre-mi.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- PÁGINAS PRINCIPALES (EN) -->
+  <url>
+    <loc>https://clasespadelvalencia.com/index-en.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/about-me.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clasespadelvalencia.com/clases-padel-valencia-grupo-individual.html</loc>
-    <priority>0.7</priority>
+    <loc>https://clasespadelvalencia.com/blog-en.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-    <url>
-    <loc>https://clasespadelvalencia.com/tecnica-tradicional-padel-estancamiento.html</loc>
-    <priority>0.7</priority>
+
+  <!-- ARTÍCULOS DEL BLOG (ES) -->
+  <url>
+    <loc>https://clasespadelvalencia.com/guia-iniciacion-padel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://clasespadelvalencia.com/por-que-no-ensenar-contrapared-padel.html</loc>
-    <priority>0.7</priority>
+    <loc>https://clasespadelvalencia.com/tecnica-tradicional-padel-estancamiento.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/empunadura-continental-padel-errores.html</loc>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/por-que-no-ensenar-contrapared-padel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/formatos-clases-padel-valencia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ARTÍCULOS DEL BLOG (EN) -->
+  <url>
+    <loc>https://clasespadelvalencia.com/padel-beginners-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/traditional-technique-padel-stagnation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/padel-continental-grip-mistakes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/why-i-never-teach-the-boast-padel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/padel-classes-valencia-group-vs-individual.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
