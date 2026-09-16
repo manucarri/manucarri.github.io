@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+    
+    <title>Padel Blog | Tips, Technique and Tactics by Manu Carrilero</title>
+    <meta name="description" content="Learn to play better padel with tips from Manu Carrilero, Sports Science Graduate and coach in Valencia.">
+    
+    <!-- Etiquetas SEO Canónicas, OpenGraph y Hreflang -->
+    <link rel="canonical" href="https://clasespadelvalencia.com/blog-en.html" />
+    <link rel="alternate" hreflang="es" href="https://clasespadelvalencia.com/blog.html" />
+    <link rel="alternate" hreflang="en" href="https://clasespadelvalencia.com/blog-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://clasespadelvalencia.com/blog.html" />
+
+    <meta property="og:title" content="Padel Blog | Manu Carrilero">
+    <meta property="og:description" content="Reflections, technique, and tips from a Sports Science expert to take your padel to the next level.">
+    <meta property="og:image" content="https://clasespadelvalencia.com/aprender-padel-valencia.avif">
+    <meta property="og:url" content="https://clasespadelvalencia.com/blog-en.html">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index-en.html" class="flex items-center gap-2">
+                <i data-lucide="tennis" class="h-8 w-8 text-padel-600"></i>
+                <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
+            </a>
+            
+            <nav class="hidden md:flex gap-8 font-medium text-gray-600">
+                <a href="index-en.html#pricing" class="hover:text-padel-600 transition-colors">Pricing</a>
+                <a href="about-me.html" class="hover:text-padel-600 transition-colors">About Me</a>
+                <a href="index-en.html#certifications" class="hover:text-padel-600 transition-colors">Certifications</a>
+                <a href="index-en.html#reviews" class="hover:text-padel-600 transition-colors">Reviews</a>
+                <a href="blog-en.html" class="hover:text-padel-600 transition-colors font-bold text-padel-900">Blog</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="blog.html" class="hidden md:flex items-center gap-2 text-gray-500 hover:text-padel-600 font-bold transition-colors border-r border-gray-200 pr-4">
+                    <span class="text-xl">🇪🇸</span> Versión en Español
+                </a>
+                <a href="https://wa.me/34622041911" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                </a>
+                
+                <button id="btn-menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
+                    <i data-lucide="menu" class="h-7 w-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 flex flex-col space-y-2">
+                <a href="blog.html" class="block px-4 py-3 text-base font-bold text-gray-700 bg-gray-50 hover:text-padel-600 rounded-xl flex items-center gap-2">
+                    <span class="text-xl">🇪🇸</span> Versión en Español
+                </a>
+                <a href="index-en.html#pricing" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Pricing</a>
+                <a href="about-me.html" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">About Me</a>
+                <a href="index-en.html#certifications" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Certifications</a>
+                <a href="index-en.html#reviews" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Reviews</a>
+                <a href="blog-en.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Go to Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">The Court Blog</h1>
+            <p class="text-xl text-gray-600">Reflections, technique, and tips from a Sports Science expert to take your padel to the next level.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- ARTÍCULO 5: NUEVA GUÍA INICIACIÓN -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-56 overflow-hidden relative bg-black">
+                    <img src="aprender-padel-valencia.avif" alt="Beginner padel lessons in Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="play-circle" class="h-16 w-16 text-white opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Beginner's Guide</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">
+                        <a href="padel-beginners-guide.html">Padel Beginner's Guide: Basic Fundamentals and Rules</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow text-sm">Everything you need to know before your first match: grip, walls, ball protocol, and scoring.</p>
+                    <a href="padel-beginners-guide.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
+                        View Guide & Video <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 4: TÉCNICA Y ESTANCAMIENTO -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="profesor-padel-valencia.avif" alt="Manu Carrilero teaching smash preparation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Biomechanics</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">
+                        <a href="traditional-technique-padel-stagnation.html">Why Traditional Technique is Holding You Back</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow text-sm">Discover the historical mistake in padel teaching that limits your power and causes injuries.</p>
+                    <a href="traditional-technique-padel-stagnation.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
+                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- ARTÍCULO 3: EMPUÑADURA -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="monitor-padel-valencia.avif" alt="Manu Carrilero correcting padel grip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Biomechanics</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">
+                        <a href="padel-continental-grip-mistakes.html">The Padel Grip: The "invisible mistake" preventing you from leveling up</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow text-sm">Discover why the continental grip is non-negotiable and how a bad grip causes stagnation.</p>
+                    <a href="padel-continental-grip-mistakes.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
+                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 2: CONTRAPARED -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="aprender-padel-valencia.avif" alt="Side wall exit padel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Technique</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">
+                        <a href="why-i-never-teach-the-boast-padel.html">Why I NEVER teach the "boast" (contrapared) to beginners</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow text-sm">The contra-pared is one of the most overused shots in amateur padel. Discover why I forbid it.</p>
+                    <a href="why-i-never-teach-the-boast-padel.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
+                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 1: FORMATOS DE CLASE -->
+            <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="grupos-padel-valencia.avif" alt="Group padel lessons" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Methodology</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">
+                        <a href="padel-classes-valencia-group-vs-individual.html">Padel lessons: Is it better to train in a group, pair, or individually?</a>
+                    </h2>
+                    <p class="text-gray-600 mb-6 flex-grow text-sm">Discover whether training in groups, in pairs, or individually is the best way to improve.</p>
+                    <a href="padel-classes-valencia-group-vs-individual.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
+                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
+                <div class="flex gap-4 flex-wrap mt-4">
+                    <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="text-padel-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-bold">
+                        <i data-lucide="instagram" class="h-5 w-5"></i> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
+                        <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
+                    </a>
+                </div>
+                <p class="text-sm mb-6 mt-4 text-gray-400">Taking your padel level to the next step. Technical, tactical, and dynamic classes.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-lg">Training Location</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="h-5 w-5 text-padel-500 shrink-0 mt-1"></i> 
+                        <span>
+                            <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
+                                <strong>Elite 22 Paterna</strong><br>Valencia, Spain<br>
+                                <span class="text-padel-500 underline">View on Google Maps</span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-lg">Direct Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
+                    </li>
+                    <li>
+                        <a href="https://wa.me/34622041911" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
+                            <i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script optimizado y diferido -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            const btnMenu = document.getElementById('btn-menu');
+            const menuMovil = document.getElementById('menu-movil');
+            const linksMovil = document.querySelectorAll('.link-movil');
+
+            if(btnMenu && menuMovil) {
+                btnMenu.addEventListener('click', () => {
+                    menuMovil.classList.toggle('hidden');
+                });
+                linksMovil.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuMovil.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
