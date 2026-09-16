@@ -26,7 +26,7 @@
         tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen overflow-x-hidden w-full">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -45,14 +45,13 @@
         </div>
     </header>
 
-    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         <div class="mb-10">
             <span class="text-padel-600 font-bold tracking-widest uppercase text-sm mb-4 block">Guía para Principiantes</span>
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">Guía de Iniciación al Pádel: Fundamentos y Reglas Básicas</h1>
         </div>
 
-        <!-- Contenedor Responsive para el vídeo de YouTube -->
         <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-xl mb-12 border-4 border-white bg-black">
             <iframe 
                 class="w-full h-full" 
@@ -65,7 +64,7 @@
             </iframe>
         </div>
 
-        <article class="text-lg text-gray-700 space-y-6 leading-relaxed">
+        <article class="text-lg text-gray-700 space-y-6 leading-relaxed w-full">
             <p>Esta guía reúne de forma completa y estructurada todos los conceptos esenciales que todo jugador principiante necesita dominar desde su primer partido: seguridad, empuñadura, equipamiento, protocolo de pelotas, mecánica del servicio y del resto, dinámica táctica de pareja, infracciones de red, reglamento de paredes, sistema de puntuación y gestión de reservas.</p>
             <p><em>(Tienes arriba la versión en vídeo explicada en inglés, ideal si juegas con amigos internacionales).</em></p>
 
@@ -77,7 +76,6 @@
             <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">La empuñadura universal (Continental o "El Martillo"):</h3>
             <p>Sujeta la empuñadura por el canto, exactamente igual que si fueras a clavar un clavo con el borde de la pala (o como si le dieses un apretón de manos a la pala). Es la empuñadura de base porque permite ejecutar tanto la derecha como el revés, las voleas y el saque sin necesidad de perder tiempo girando la pala en la mano entre golpe y golpe.</p>
 
-            <!-- ENLACE INTERNO: EMPUÑADURA -->
             <div class="bg-padel-50 border border-padel-200 rounded-2xl p-6 my-6 shadow-sm">
                 <div class="flex items-start gap-4">
                     <i data-lucide="info" class="h-6 w-6 text-padel-600 shrink-0 mt-1"></i>
@@ -126,33 +124,36 @@
             </ul>
 
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">4. Dinámica de Pareja, Posicionamiento e Infracciones</h2>
-            <div class="overflow-x-auto my-8">
-                <table class="w-full text-left border-collapse bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-                    <thead>
-                        <tr class="bg-padel-900 text-white">
-                            <th class="p-4 font-bold">Situación</th>
-                            <th class="p-4 font-bold">Posición en Pista</th>
-                            <th class="p-4 font-bold">Objetivo Táctico</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-700 divide-y divide-gray-200">
-                        <tr>
-                            <td class="p-4 font-bold">Ataque (Red)</td>
-                            <td class="p-4">Ambos jugadores situados arriba, cerca de la red (~2 metros).</td>
-                            <td class="p-4">Volear con agresividad, presionar a los rivales y buscar la definición del punto.</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                            <td class="p-4 font-bold">Defensa (Fondo)</td>
-                            <td class="p-4">Ambos jugadores posicionados detrás de la línea de saque.</td>
-                            <td class="p-4">Defender rebotes en las paredes, contener el ataque rival y buscar tiros por abajo o globos.</td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 font-bold">Transición en Bloque</td>
-                            <td class="p-4">Movimiento conjunto sincronizado ("efecto goma").</td>
-                            <td class="p-4">Subir y bajar a la vez. Si los rivales tiran un globo por encima, los dos bajan juntos. Nunca debe quedar uno descolgado arriba y otro abajo.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+            <div class="w-full max-w-full overflow-hidden my-8 rounded-2xl shadow-sm border border-gray-200">
+                <div class="w-full overflow-x-auto">
+                    <table class="w-full min-w-[500px] text-left border-collapse bg-white">
+                        <thead>
+                            <tr class="bg-padel-900 text-white">
+                                <th class="p-4 font-bold">Situación</th>
+                                <th class="p-4 font-bold">Posición en Pista</th>
+                                <th class="p-4 font-bold">Objetivo Táctico</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-4 font-bold">Ataque (Red)</td>
+                                <td class="p-4">Ambos jugadores situados arriba, cerca de la red (~2 metros).</td>
+                                <td class="p-4">Volear con agresividad, presionar a los rivales y buscar la definición del punto.</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-4 font-bold">Defensa (Fondo)</td>
+                                <td class="p-4">Ambos jugadores posicionados detrás de la línea de saque.</td>
+                                <td class="p-4">Defender rebotes en las paredes, contener el ataque rival y buscar tiros por abajo o globos.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Transición en Bloque</td>
+                                <td class="p-4">Movimiento conjunto sincronizado ("efecto goma").</td>
+                                <td class="p-4">Subir y bajar a la vez. Si los rivales tiran un globo por encima, los dos bajan juntos. Nunca debe quedar uno descolgado arriba y otro abajo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <p><strong>Cobertura y gestión del centro:</strong> La franja central de la pista es el área más crítica. Las pelotas que entran por el medio las asume con mayor facilidad el jugador cuya mano dominante (derecha/drive) queda orientada hacia el centro de la pista.</p>
@@ -168,23 +169,26 @@
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">5. El Uso de Cristales y Paredes</h2>
             <p>El principio fundamental del juego con paredes se resume en una única regla: <strong>la pelota siempre debe tocar el suelo antes de cualquier pared o reja.</strong></p>
 
-            <div class="bg-gray-900 text-green-400 p-6 rounded-2xl font-mono text-sm overflow-x-auto whitespace-pre my-8 shadow-inner border border-gray-800">
+            <div class="w-full max-w-full overflow-hidden my-8 rounded-2xl bg-gray-900 shadow-inner border border-gray-800">
+                <div class="w-full overflow-x-auto p-4 md:p-6">
+                    <pre class="text-green-400 font-mono text-xs md:text-sm whitespace-pre">
                    GOLPE DEL RIVAL
                          │
                          ▼
             ¿Toca primero el suelo de tu campo?
-               ├── NO ──► OUT (Punto para ti si va directo al cristal)
+               ├── NO ──► OUT (Punto para ti si va directo)
                │
                └── SÍ ──► BOLA VÁLIDA (EN JUEGO)
-                           ├── Puedes golpearla directamente tras el bote
-                           ├── Puedes dejar que rebote en tu cristal y golpearla
-                           └── Puedes pegarle contra tu cristal (contra-pared)
+                           ├── Golpearla directamente
+                           ├── Dejar que rebote en el cristal
+                           └── Contra-pared
+                    </pre>
+                </div>
             </div>
 
             <p><strong>Paredes del rival:</strong> Al enviar la pelota hacia el campo contrario, el golpe debe tocar obligatoriamente el suelo antes de impactar en el cristal o reja del rival. Si no bota, es bola fuera (out).</p>
             <p><strong>Uso de las paredes propias y la Contra-pared:</strong> Una vez la pelota rival bota en tu suelo, puedes impactarla antes de que llegue a la pared o permitir que rebote en el cristal. Tienes permitido golpear la pelota con fuerza directamente contra tus propios cristales (contra-pared) para que el rebote cruce la red y bote en el campo contrario.</p>
 
-            <!-- ENLACE INTERNO: CONTRAPARED -->
             <div class="bg-padel-50 border border-padel-200 rounded-2xl p-6 my-6 shadow-sm">
                 <div class="flex items-start gap-4">
                     <i data-lucide="alert-triangle" class="h-6 w-6 text-padel-600 shrink-0 mt-1"></i>
@@ -206,7 +210,6 @@
             </ul>
         </article>
 
-        <!-- MÓDULO CTA -->
         <div class="mt-16 text-center border-t border-gray-100 pt-12">
             <a href="https://wa.me/34622041911?text=Hola%20Manu,%20he%20visto%20tu%20guía%20de%20iniciación%20y%20quiero%20empezar%20a%20dar%20clases%20de%20pádel" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
                 <i data-lucide="message-circle" class="h-6 w-6"></i> Reserva tu primera clase de pádel
@@ -214,7 +217,7 @@
         </div>
     </main>
 
-    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
                 <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
