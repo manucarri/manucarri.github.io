@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
         tailwind.config = { theme: { extend: { colors: { padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' } } } } }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen overflow-x-hidden w-full">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -45,14 +45,13 @@
         </div>
     </header>
 
-    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         <div class="mb-10">
             <span class="text-padel-600 font-bold tracking-widest uppercase text-sm mb-4 block">Beginner's Guide</span>
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">Padel Beginner's Guide: Basic Fundamentals and Rules</h1>
         </div>
 
-        <!-- Responsive YouTube Video Container -->
         <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-xl mb-12 border-4 border-white bg-black">
             <iframe 
                 class="w-full h-full" 
@@ -65,7 +64,7 @@
             </iframe>
         </div>
 
-        <article class="text-lg text-gray-700 space-y-6 leading-relaxed">
+        <article class="text-lg text-gray-700 space-y-6 leading-relaxed w-full">
             <p>This guide brings together in a complete and structured way all the essential concepts that every beginner player needs to master from their very first match: safety, grip, equipment, ball protocol, serving and returning mechanics, pair tactical dynamics, net faults, wall rules, scoring system, and booking management.</p>
 
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">1. Safety, Mandatory Equipment, and Grip</h2>
@@ -76,7 +75,6 @@
             <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">The universal grip (Continental or "The Hammer"):</h3>
             <p>Hold the grip by the edge, exactly as if you were going to hammer a nail with the edge of the racket (or as if you were shaking hands with it). This is the base grip because it allows you to execute the forehand, backhand, volleys, and serve without needing to waste time turning the racket in your hand between shots.</p>
 
-            <!-- INTERNAL LINK: GRIP -->
             <div class="bg-padel-50 border border-padel-200 rounded-2xl p-6 my-6 shadow-sm">
                 <div class="flex items-start gap-4">
                     <i data-lucide="info" class="h-6 w-6 text-padel-600 shrink-0 mt-1"></i>
@@ -125,33 +123,36 @@
             </ul>
 
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">4. Pair Dynamics, Positioning, and Net Faults</h2>
-            <div class="overflow-x-auto my-8">
-                <table class="w-full text-left border-collapse bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-                    <thead>
-                        <tr class="bg-padel-900 text-white">
-                            <th class="p-4 font-bold">Situation</th>
-                            <th class="p-4 font-bold">Court Position</th>
-                            <th class="p-4 font-bold">Tactical Goal</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-700 divide-y divide-gray-200">
-                        <tr>
-                            <td class="p-4 font-bold">Attack (Net)</td>
-                            <td class="p-4">Both players positioned up, close to the net (~2 meters).</td>
-                            <td class="p-4">Volley aggressively, pressure opponents, and seek to finish the point.</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                            <td class="p-4 font-bold">Defense (Back)</td>
-                            <td class="p-4">Both players positioned behind the service line.</td>
-                            <td class="p-4">Defend wall rebounds, contain the opponent's attack, and look for low shots or lobs.</td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 font-bold">Block Transition</td>
-                            <td class="p-4">Synchronized joint movement ("rubber band effect").</td>
-                            <td class="p-4">Move up and down together. If opponents play a lob over you, both players drop back together. One should never be left stranded up front.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+            <div class="w-full max-w-full overflow-hidden my-8 rounded-2xl shadow-sm border border-gray-200">
+                <div class="w-full overflow-x-auto">
+                    <table class="w-full min-w-[500px] text-left border-collapse bg-white">
+                        <thead>
+                            <tr class="bg-padel-900 text-white">
+                                <th class="p-4 font-bold">Situation</th>
+                                <th class="p-4 font-bold">Court Position</th>
+                                <th class="p-4 font-bold">Tactical Goal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-4 font-bold">Attack (Net)</td>
+                                <td class="p-4">Both players positioned up, close to the net (~2 meters).</td>
+                                <td class="p-4">Volley aggressively, pressure opponents, and seek to finish the point.</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-4 font-bold">Defense (Back)</td>
+                                <td class="p-4">Both players positioned behind the service line.</td>
+                                <td class="p-4">Defend wall rebounds, contain the opponent's attack, and look for low shots or lobs.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Block Transition</td>
+                                <td class="p-4">Synchronized joint movement ("rubber band effect").</td>
+                                <td class="p-4">Move up and down together. If opponents play a lob over you, both players drop back together. One should never be left stranded up front.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <p><strong>Covering and managing the center:</strong> The central strip of the court is the most critical area. As a standard rule, balls coming down the middle are more easily taken by the player whose dominant hand (forehand/drive) is oriented towards the center of the court.</p>
@@ -167,24 +168,27 @@
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">5. Using the Glass and Walls</h2>
             <p>The fundamental principle of playing with walls is summed up in a single rule: <strong>the ball must always touch the ground before any wall or grid.</strong></p>
 
-            <div class="bg-gray-900 text-green-400 p-6 rounded-2xl font-mono text-sm overflow-x-auto whitespace-pre my-8 shadow-inner border border-gray-800">
+            <div class="w-full max-w-full overflow-hidden my-8 rounded-2xl bg-gray-900 shadow-inner border border-gray-800">
+                <div class="w-full overflow-x-auto p-4 md:p-6">
+                    <pre class="text-green-400 font-mono text-xs md:text-sm whitespace-pre">
                    OPPONENT'S SHOT
                          │
                          ▼
             Does it hit the ground on your side first?
-               ├── NO ──► OUT (Point for you if it hits the glass directly)
+               ├── NO ──► OUT (Point for you if direct)
                │
                └── YES ─► VALID BALL (IN PLAY)
-                           ├── You can hit it directly after the bounce
-                           ├── You can let it bounce off your glass and hit it
-                           └── You can hit it against your own glass (boast)
+                           ├── Hit it directly after the bounce
+                           ├── Let it bounce off your glass
+                           └── Hit it against your glass (boast)
+                    </pre>
+                </div>
             </div>
 
             <p><strong>Opponent's walls:</strong> When sending the ball to the opponent's court, the shot must touch the ground before hitting the opponent's back glass, side glass, or metal grid. If it directly hits any opposing structure without bouncing first, the ball is out.</p>
             
             <p><strong>Using your own walls and the Boast (Contra-pared):</strong> Once the opponent's ball bounces on your ground, you can hit it before it reaches the wall or allow it to bounce off the glass. You are allowed to hit the ball forcefully directly against your own glass (contra-pared/boast) so that the rebound crosses the net and bounces in the opponent's court.</p>
 
-            <!-- INTERNAL LINK: CONTRAPARED -->
             <div class="bg-padel-50 border border-padel-200 rounded-2xl p-6 my-6 shadow-sm">
                 <div class="flex items-start gap-4">
                     <i data-lucide="alert-triangle" class="h-6 w-6 text-padel-600 shrink-0 mt-1"></i>
@@ -206,7 +210,6 @@
             </ul>
         </article>
 
-        <!-- CTA MODULE -->
         <div class="mt-16 text-center border-t border-gray-100 pt-12">
             <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20have%20read%20your%20beginner%20guide%20and%20I%20want%20to%20start%20taking%20padel%20lessons" target="_blank" class="inline-flex items-center justify-center gap-3 bg-padel-900 text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-padel-600 transition-colors shadow-xl w-full sm:w-auto">
                 <i data-lucide="message-circle" class="h-6 w-6"></i> Book your first padel lesson
@@ -214,7 +217,7 @@
         </div>
     </main>
 
-    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
                 <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
