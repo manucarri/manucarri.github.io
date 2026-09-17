@@ -128,8 +128,10 @@
         </div>
     </main>
 
-    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
+<footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Columna 1: Info y Redes -->
             <div>
                 <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
                 <div class="flex gap-4 flex-wrap mt-4">
@@ -142,22 +144,46 @@
                 </div>
                 <p class="text-sm mb-6 mt-4 text-gray-400">Taking your padel level to the next step. Technical, tactical, and dynamic classes.</p>
             </div>
+            
+            <!-- Columna 2: Ubicación + SEO LOCAL -->
             <div>
                 <h4 class="text-white font-bold mb-4 text-lg">Training Location</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-start gap-3">
                         <i data-lucide="map-pin" class="h-5 w-5 text-padel-500 shrink-0 mt-1"></i> 
-                        <span><a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors"><strong>Elite 22 Paterna</strong><br>Valencia, Spain<br><span class="text-padel-500 underline">View on Google Maps</span></a></span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
+                                <strong>Elite 22 Paterna</strong><br>Valencia, Spain<br>
+                                <span class="text-padel-500 underline">View on Google Maps</span>
+                            </a>
+                        </span>
                     </li>
                 </ul>
+                
+                <!-- NUEVO BLOQUE SEO LOCAL -->
+                <div class="mt-5 pt-5 border-t border-gray-800">
+                    <p class="text-xs leading-relaxed text-gray-500">
+                        Lessons held at <strong>Elite 22 (Paterna)</strong>. Easily accessible club with free parking, less than 10 minutes away for players from <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella, and Valencia city</strong>.
+                    </p>
+                </div>
+                <!-- FIN DEL BLOQUE SEO LOCAL -->
             </div>
+            
+            <!-- Columna 3: Contacto -->
             <div>
                 <h4 class="text-white font-bold mb-4 text-lg">Direct Contact</h4>
                 <ul class="space-y-3 text-sm">
-                    <li class="flex items-center gap-3"><i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11</li>
-                    <li><a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer_about_me'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2"><i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp</a></li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
+                    </li>
+                    <li>
+                        <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer_about_me_en'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
+                            <i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp
+                        </a>
+                    </li>
                 </ul>
             </div>
+            
         </div>
     </footer>
 
