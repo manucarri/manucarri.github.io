@@ -1,299 +1,496 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Padel Lessons in Valencia & Paterna | Manu Carrilero · Sports Science Degree</title>
-  <meta name="description" content="Professional padel coaching in Valencia and Paterna with Manu Carrilero. Degree in Sports Science (CAFYD), ball machine, and video analysis at Elite 22.">
-  <link rel="canonical" href="https://clasespadelvalencia.com/en/">
-  <link rel="alternate" hreflang="es" href="https://clasespadelvalencia.com/">
-  <link rel="alternate" hreflang="en" href="https://clasespadelvalencia.com/en/">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+    
+    <title>Manu Carrilero | Padel Coach in Valencia and Paterna</title>
+    <meta name="description" content="Padel lessons in Valencia (Elite 22). Improve your game with Manu Carrilero, Sports Science Graduate. Individual and group sessions.">
+    <meta name="keywords" content="padel coach valencia, padel lessons paterna, elite 22 paterna, english speaking padel coach, manu carrilero, padel teacher valencia">
+    
+    <!-- Etiquetas SEO Canónicas, OpenGraph y Hreflang (Idiomas) -->
+    <link rel="canonical" href="https://clasespadelvalencia.com/index-en.html" />
+    <link rel="alternate" hreflang="es" href="https://clasespadelvalencia.com/" />
+    <link rel="alternate" hreflang="en" href="https://clasespadelvalencia.com/index-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://clasespadelvalencia.com/" />
+
+    <meta property="og:title" content="Manu Carrilero | Padel Coach in Valencia">
+    <meta property="og:description" content="Padel lessons in Valencia and Paterna. Master your technique with Manu Carrilero.">
+    <meta property="og:image" content="https://clasespadelvalencia.com/manu-carrilero-padel-valencia.avif">
+    <meta property="og:url" content="https://clasespadelvalencia.com/index-en.html">
+    <meta property="og:type" content="website">
+
+    <!-- Datos Estructurados Schema.org para SEO Local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Manu Carrilero | Padel Coach",
+      "image": "https://clasespadelvalencia.com/manu-carrilero-padel-valencia.avif",
+      "@id": "https://clasespadelvalencia.com/index-en.html",
+      "url": "https://clasespadelvalencia.com/index-en.html",
+      "telephone": "+34622041911",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Elite 22 Paterna",
+        "addressLocality": "Paterna",
+        "addressRegion": "Valencia",
+        "addressCountry": "ES"
+      },
+      "description": "English speaking padel coach in Valencia and Paterna. Improve your game with Manu Carrilero, Sports Science Graduate.",
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-pattern { background-color: #14532d; background-image: radial-gradient(#16a34a 1px, transparent 1px); background-size: 24px 24px; }
+        .smooth-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HT4WB8DKEV');
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-  <!-- Navigation -->
-  <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="/en/" class="text-xl font-bold tracking-tight text-slate-900">
-        Manu Carrilero <span class="text-emerald-600">·</span> Padel
-      </a>
-      <div class="flex items-center gap-6 text-sm font-medium">
-        <a href="#method" class="hidden sm:inline-block text-slate-600 hover:text-emerald-600 transition">Method</a>
-        <a href="#rates" class="text-slate-600 hover:text-emerald-600 transition">Pricing</a>
-        <a href="/" class="px-2 py-1 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-md transition">ES</a>
-        <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I%20am%20interested%20in%20padel%20lessons" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-xs sm:text-sm shadow-sm transition">
-          Contact
-        </a>
-      </div>
-    </div>
-  </nav>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i data-lucide="tennis" class="h-8 w-8 text-padel-600"></i>
+                <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
+            </div>
+            
+            <nav class="hidden md:flex gap-8 font-medium text-gray-600">
+                <a href="#tarifas" class="hover:text-padel-600 transition-colors">Pricing</a>
+                <a href="#sobre-mi" class="hover:text-padel-600 transition-colors">About Me & Method</a>
+                <a href="#titulaciones" class="hover:text-padel-600 transition-colors">Credentials</a>
+                <a href="#opiniones" class="hover:text-padel-600 transition-colors">Reviews</a>
+                <a href="blog.html" class="hover:text-padel-600 transition-colors font-bold text-padel-900">Blog</a>
+            </nav>
 
-  <!-- Hero Section -->
-  <header class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16 sm:pt-20 sm:pb-24">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
-        <span>📍 Elite 22 · Paterna (Valencia)</span>
-      </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-        Master padel through <span class="text-emerald-600">sports science, biomechanics</span> & injury prevention.
-      </h1>
-      <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">
-        Structured training programs organized on a fixed monthly basis. Coached by a <strong>Degree holder in Physical Activity and Sport Sciences (CAFYD)</strong> featuring high-speed video feedback and ball machine drills on indoor courts.
-      </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4">
-        <a href="#rates" class="px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/20 text-center transition">
-          View Monthly Plans & Rates
-        </a>
-        <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I%20would%20like%20to%20check%20availability" target="_blank" class="px-7 py-3.5 bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-bold rounded-xl text-center shadow-sm transition">
-          Check Available Slots on WhatsApp
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Value Pillars -->
-  <section id="method" class="bg-white border-y border-slate-200 py-16 sm:py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Coaching Methodology</h2>
-        <p class="text-3xl font-extrabold text-slate-900 mt-2">Why this is not standard club coaching</p>
-      </div>
-
-      <div class="grid sm:grid-cols-3 gap-8">
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center font-bold text-xl mb-4">🎓</div>
-          <h3 class="text-lg font-bold text-slate-900">Sports Science Degree</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-            No endless mindless ball feeding. Every drill optimizes your kinetic chain so you generate effortless power without overloading your elbow or shoulder.
-          </p>
+            <div class="flex items-center gap-4">
+                <a href="/" class="hidden md:flex items-center gap-2 text-gray-500 hover:text-padel-600 font-bold transition-colors border-r border-gray-200 pr-4">
+                    <span class="text-xl">🇪🇸</span> Versión Español
+                </a>
+                
+                <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'header_escritorio'});" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                </a>
+                
+                <button id="btn-menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
+                    <i data-lucide="menu" class="h-7 w-7"></i>
+                </button>
+            </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center font-bold text-xl mb-4">🤖</div>
-          <h3 class="text-lg font-bold text-slate-900">Professional Ball Machine</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-            Millimeter precision to dial in volleys, bandejas, and wall exits with shot volumes and consistency unachievable by hand feeding.
-          </p>
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 flex flex-col space-y-2">
+                <a href="/" class="block px-4 py-3 text-base font-bold text-gray-700 bg-gray-50 hover:text-padel-600 rounded-xl flex items-center gap-2">
+                    <span class="text-xl">🇪🇸</span> Versión Español
+                </a>
+                <a href="#tarifas" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Pricing</a>
+                <a href="#sobre-mi" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">About Me & Method</a>
+                <a href="#titulaciones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Credentials</a>
+                <a href="#opiniones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Reviews</a>
+                <a href="blog.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Read Blog</a>
+                <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'menu_movil'});" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-500 rounded-xl text-center flex justify-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                </a>
+            </div>
         </div>
+    </header>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center font-bold text-xl mb-4">📹</div>
-          <h3 class="text-lg font-bold text-slate-900">Immediate Video Feedback</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-            On-court camera breakdown. Watching your kinetic chain in slow motion breaks bad habits instantly and drastically speeds up motor learning.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Table -->
-  <section id="rates" class="py-16 sm:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Plans & Formats</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Monthly Memberships (Indoor Court Included)</h2>
-        <p class="text-slate-600 mt-3 text-sm sm:text-base">
-          1 recurring weekly session locked in your private slot. Transparent rates calculated on an annual 4.2 weeks/month average (5-week months carry zero extra charges).
-        </p>
-      </div>
-
-      <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+    <main class="flex-grow">
         
-        <!-- Small Group Card (Highlighted) -->
-        <div class="bg-white rounded-3xl border-2 border-emerald-500 p-7 sm:p-8 shadow-xl relative flex flex-col justify-between order-1 lg:order-2">
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-extrabold uppercase tracking-wider py-1.5 px-4 rounded-full shadow-md">
-            Most Popular
-          </div>
-          <div>
-            <div class="flex justify-between items-baseline mb-4">
-              <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Small Group</span>
-              <span class="text-xs font-medium text-slate-400">3 - 4 players</span>
+        <section class="relative hero-pattern text-white py-20 lg:py-28 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 relative z-10">
+                <div class="lg:w-1/2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide hover:bg-gray-200 transition-colors">
+                            Elite 22 Paterna
+                        </a>
+                        <span class="flex items-center gap-1 text-sm font-medium"><span class="text-2xl">🇬🇧</span> / <span class="text-2xl">🇪🇸</span> Bilingual Coaching</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-white">
+                        Improve your game while <span class="text-padel-accent">enjoying</span> the court.
+                    </h1>
+                    
+                    <p class="text-xl text-green-50 mb-8 max-w-xl">
+                        Tactics, biomechanics and video feedback. Join my recurring monthly groups or book your private slot in Valencia and Paterna.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'hero_portada'});" target="_blank" class="bg-padel-accent text-padel-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors text-center shadow-lg flex items-center justify-center gap-2">
+                            Book my first session
+                        </a>
+                        <a href="#tarifas" class="bg-transparent border-2 border-green-400 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-800 transition-colors text-center">
+                            View Pricing
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute inset-0 bg-padel-accent rounded-3xl rotate-3 opacity-20"></div>
+                        <img src="clases-padel-valencia.avif" alt="Padel lessons in Valencia with Manu Carrilero" class="relative z-10 w-full h-auto object-cover rounded-3xl shadow-2xl border-4 border-white/10">
+                    </div>
+                </div>
             </div>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl sm:text-5xl font-extrabold text-slate-900">€69</span>
-              <span class="text-slate-500 font-medium">/ month</span>
+        </section>
+
+        <section id="tarifas" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Monthly Training Programs</h2>
+                    <p class="text-gray-600 text-lg">1 recurring weekly session (Mon-Fri). Indoor court rental included in all plans.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Tarjeta Individual -->
+                    <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200 hover:shadow-xl transition-shadow flex flex-col relative overflow-hidden">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Private 1-on-1</h3>
+                        <p class="text-gray-500 mb-6">100% focused attention and meticulous technical refinement.</p>
+                        <div class="mb-6">
+                            <span class="text-5xl font-black text-gray-900">€165</span>
+                            <span class="text-gray-500 font-medium">/ month</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow text-gray-700 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> 1 fixed weekly session (1h)</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Indoor court at Elite 22</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Continuous video analysis</li>
+                        </ul>
+                        <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I'm%20interested%20in%20the%20private%20monthly%20plan" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_individual'});" class="block w-full bg-padel-900 text-white text-center py-4 rounded-xl font-bold hover:bg-padel-600 transition-colors">Check available slots</a>
+                    </div>
+
+                    <!-- Tarjeta Grupo (Nueva Tarjeta Destacada) -->
+                    <div class="bg-padel-900 rounded-3xl p-8 border border-padel-800 shadow-2xl flex flex-col relative transform md:-translate-y-4">
+                        <div class="absolute top-0 right-0 bg-padel-accent text-padel-900 font-bold text-xs uppercase tracking-wider py-1 px-4 rounded-bl-xl rounded-tr-3xl">Most Popular</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Small Group</h3>
+                        <p class="text-gray-300 mb-6">3 to 4 players. Best value, dynamic match play, and leveled pairings.</p>
+                        <div class="mb-6 text-white">
+                            <span class="text-5xl font-black">€69</span>
+                            <span class="text-gray-400 font-medium">/ month / player</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow text-gray-200 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5"></i> 1 fixed weekly session (1h)</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5"></i> Indoor court included</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5"></i> Ball machine & video feedback</li>
+                        </ul>
+                        <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I'm%20interested%20in%20joining%20a%20small%20group" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_grupo'});" class="block w-full bg-padel-accent text-padel-900 text-center py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors shadow-lg">Ask for availability</a>
+                    </div>
+
+                    <!-- Tarjeta Pareja -->
+                    <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200 hover:shadow-xl transition-shadow flex flex-col relative overflow-hidden">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pair</h3>
+                        <p class="text-gray-500 mb-6">Come with your tournament partner and build team tactics together.</p>
+                        <div class="mb-6">
+                            <span class="text-5xl font-black text-gray-900">€95</span>
+                            <span class="text-gray-500 font-medium">/ month / player</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow text-gray-700 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> 1 fixed weekly session (1h)</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Indoor court at Elite 22</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5"></i> Court positioning & transitions</li>
+                        </ul>
+                        <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I'm%20interested%20in%20the%20pair%20monthly%20plan" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_pareja'});" class="block w-full bg-gray-200 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-300 transition-colors">Book pair slot</a>
+                    </div>
+                </div>
+
+                <!-- Aviso Diagnóstico y Condiciones -->
+                <div class="mt-12 text-center max-w-2xl mx-auto">
+                    <p class="text-sm text-gray-500 mb-3">* Want to try a session before committing to a monthly plan? Single technical diagnostic evaluation: <strong>€40</strong> (court included).</p>
+                    <a href="terms.html" class="inline-flex items-center gap-1.5 text-padel-600 font-bold hover:text-padel-900 transition-colors text-sm underline underline-offset-4">
+                        <i data-lucide="info" class="h-4 w-4"></i> Check our complete service terms and rescheduling policy
+                    </a>
+                </div>
             </div>
-            <p class="text-xs text-slate-500 mt-1 font-medium">Equates to only ~€16 per session with court rental included.</p>
+        </section>
 
-            <div class="my-6 border-t border-slate-100"></div>
-
-            <ul class="space-y-3 text-sm text-slate-600">
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span><strong>1 fixed recurring weekly session</strong> (1 hour)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span><strong>Indoor court rental included</strong> at Elite 22</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Ball machine & video analysis integration</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Carefully matched skill levels (Levels 0 to 4.0)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Make-up options with 24-48h advance notice</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8">
-            <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I%20would%20like%20to%20join%20a%20small%20group%20(%E2%82%AC69/month)" target="_blank" class="w-full block py-3.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-center shadow-md transition">
-              Apply for a Group Slot
-            </a>
-          </div>
-        </div>
-
-        <!-- Pair Card -->
-        <div class="bg-white rounded-3xl border border-slate-200 p-7 sm:p-8 shadow-sm flex flex-col justify-between order-2 lg:order-1">
-          <div>
-            <div class="flex justify-between items-baseline mb-4">
-              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Pair Training</span>
-              <span class="text-xs font-medium text-slate-400">2 players</span>
+        <!-- (El resto del código se mantiene EXACTAMENTE igual que el original, traducido) -->
+        <section id="sobre-mi" class="py-24 bg-padel-50 border-t border-padel-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-5/12">
+                    <div class="relative">
+                        <img src="manu-carrilero-padel-valencia.avif" alt="Manu Carrilero, english speaking padel coach in Valencia" class="rounded-3xl shadow-xl w-full object-cover border-4 border-white">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-5 rounded-2xl shadow-xl border border-gray-100 hidden sm:block">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-50 text-blue-600 p-3 rounded-xl"><i data-lucide="graduation-cap" class="h-8 w-8"></i></div>
+                                <div>
+                                    <p class="font-black text-gray-900 text-lg leading-tight">CAFE/CAFD</p>
+                                    <p class="text-sm text-gray-500 font-medium">Sports Science Degree</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-7/12">
+                    <span class="text-padel-600 font-bold tracking-widest uppercase text-sm mb-2 block">About Me</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">Over 20 years on the court. <br>A decade dedicated to coaching.</h2>
+                    
+                    <div class="space-y-4 text-lg text-gray-600 mb-8 leading-relaxed">
+                        <p>I am Manu Carrilero, and sports and teaching are in my DNA. I've been holding a padel racket for over two decades and have spent over 10 years professionally dedicated to helping my students reach their maximum potential on the court.</p>
+                        <p>My goal isn't just for you to "hit the ball back." My goal is for you to understand the game. As a <strong>Sports Science Graduate</strong>, I approach padel through science, biomechanics, and structured progression.</p>
+                        <p>In my classes, we apply a methodology based on tactical analysis, injury prevention, and video feedback.</p>
+                    </div>
+                    
+                    <a href="sobre-mi.html" class="inline-flex items-center gap-2 bg-white border-2 border-padel-600 text-padel-900 px-8 py-3 rounded-full font-bold hover:bg-padel-600 hover:text-white transition-all shadow-sm">
+                        Learn about my full trajectory <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                </div>
             </div>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl font-extrabold text-slate-900">€95</span>
-              <span class="text-slate-500 font-medium">/ month / player</span>
+        </section>
+
+        <section id="titulaciones" class="py-20 bg-white border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Official Credentials</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">Passion for padel is essential, but technical and academic training makes the difference in your learning process.</p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2 grid gap-6">
+                        <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl smooth-shadow border border-gray-100">
+                            <div class="bg-padel-100 text-padel-600 p-3 rounded-lg shrink-0">
+                                <i data-lucide="award" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Padel Professionals Association (APA)</h4>
+                                <p class="text-gray-600 text-sm mt-1">Official Padel Coach Certificate acquired in 2013, through intensive training taught by sports references like Jorge Nicolini and Máximo Castellote.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl smooth-shadow border border-gray-100">
+                            <div class="bg-padel-100 text-padel-600 p-3 rounded-lg shrink-0">
+                                <i data-lucide="shield-check" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">MM Academy Coach</h4>
+                                <p class="text-gray-600 text-sm mt-1">Technical certification acquired in 2025 under Manu Martín's renowned methodology.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl smooth-shadow border border-gray-100">
+                            <div class="bg-blue-50 text-blue-600 p-3 rounded-lg shrink-0">
+                                <i data-lucide="book-open" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Sports Science University Degree (CAFE/CAFD)</h4>
+                                <p class="text-gray-600 text-sm mt-1">Higher academic training in Physical Activity and Sports Sciences (2007-2012), backed by a Master's degree in sports research and teaching.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 flex flex-col gap-6">
+                        <img src="Profesor-padel-titulado-valencia.avif" alt="Padel Professionals Association APA Certificate" class="rounded-2xl shadow-md border border-gray-200 w-full hover:scale-105 transition-transform duration-300">
+                        <img src="MM-academy-valencia.avif" alt="MM Academy Coach Manu Martín Certificate" class="rounded-2xl shadow-md border border-gray-200 w-full hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
             </div>
-            <p class="text-xs text-slate-500 mt-1">Ideal for tournament partners or real match tactical work.</p>
+        </section>
 
-            <div class="my-6 border-t border-slate-100"></div>
+        <section id="opiniones" class="py-20 bg-padel-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold mb-4">What my students say</h2>
+                    <div class="flex justify-center items-center gap-1 text-yellow-400 mb-2">
+                        <i data-lucide="star" class="h-6 w-6 fill-current"></i><i data-lucide="star" class="h-6 w-6 fill-current"></i><i data-lucide="star" class="h-6 w-6 fill-current"></i><i data-lucide="star" class="h-6 w-6 fill-current"></i><i data-lucide="star" class="h-6 w-6 fill-current"></i>
+                    </div>
+                </div>
 
-            <ul class="space-y-3 text-sm text-slate-600">
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>1 fixed recurring weekly session (1 hour)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Indoor court included at Elite 22</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Tactical synchronization and court positioning</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Video feedback & ball machine drills</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8">
-            <a href="https://wa.me/34622041911?text=Hello%20Manu,%20we%20want%20pair%20lessons%20(%E2%82%AC95/month/player)" target="_blank" class="w-full block py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-center transition">
-              Book Pair Slot
-            </a>
-          </div>
-        </div>
-
-        <!-- 1-on-1 Card -->
-        <div class="bg-white rounded-3xl border border-slate-200 p-7 sm:p-8 shadow-sm flex flex-col justify-between order-3">
-          <div>
-            <div class="flex justify-between items-baseline mb-4">
-              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Private 1-on-1</span>
-              <span class="text-xs font-medium text-slate-400">1 player</span>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
+                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"I started beginner classes a month and a half ago. Manu knows exactly where you start... he adapts the classes so you improve without frustration and always leave with a positive feeling."</p>
+                        <div class="font-bold text-white text-sm flex items-center gap-3">
+                            <img src="grupos-padel-valencia.avif" class="w-10 h-10 rounded-full object-cover border-2 border-padel-500" alt="Padel students in Valencia"> Lourdes
+                        </div>
+                    </div>
+                    <div class="bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
+                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"I've been training with Manu for years. A great professional in all aspects. Always attentive to my progression and helped me recover from two different injuries. Highly recommended."</p>
+                        <div class="font-bold text-white text-sm flex items-center gap-3">
+                            <img src="profesor-padel-valencia.avif" class="w-10 h-10 rounded-full object-cover border-2 border-padel-500" alt="Fun padel lessons"> Pablo Capó
+                        </div>
+                    </div>
+                    <div class="bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
+                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"Excellent coach 💪 teaches us to the maximum, great dedication and patience 👌"</p>
+                        <div class="font-bold text-white text-sm flex items-center gap-3">
+                            <div class="w-10 h-10 bg-padel-600 rounded-full flex items-center justify-center">C</div> Carmen Tomelict
+                        </div>
+                    </div>
+                    <div class="bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
+                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"An incredible and very fun first padel lesson! Super professional! I totally recommend it!"</p>
+                        <div class="font-bold text-white text-sm flex items-center gap-3">
+                            <div class="w-10 h-10 bg-padel-600 rounded-full flex items-center justify-center">C</div> Cas Marckelbach
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="aprender-padel-valencia.avif" alt="Picking up padel balls in class" class="rounded-xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    <img src="grupos-padel-valencia.avif" alt="Padel class group in Valencia" class="rounded-xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    <img src="profesor-padel-valencia.avif" alt="Padel coach teaching class" class="rounded-xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    <img src="opiniones-padel-clases-valencia.avif" alt="Padel students reviews" class="rounded-xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                </div>
             </div>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl font-extrabold text-slate-900">€165</span>
-              <span class="text-slate-500 font-medium">/ month</span>
+        </section>
+
+        <!-- SECCIÓN DE BLOG -->
+        <section id="blog-home" class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Latest Tips on the Blog</h2>
+                        <p class="text-gray-600 text-lg">Learn technique, tactics and methodology off the court.</p>
+                    </div>
+                    <a href="blog.html" class="hidden md:flex items-center gap-2 text-padel-600 font-bold hover:text-padel-900 transition-colors">
+                        View all articles <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Artículo Destacado 1 -->
+                    <a href="guia-iniciacion-padel.html" class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group flex flex-col sm:flex-row">
+                        <div class="w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden relative bg-black">
+                            <img src="aprender-padel-valencia.avif" alt="Beginner padel lessons in Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i data-lucide="play-circle" class="h-12 w-12 text-white opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 w-full sm:w-3/5 flex flex-col justify-center">
+                            <span class="text-padel-600 text-xs font-bold uppercase tracking-widest mb-2 block">Guide & Video</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">Beginner's Guide: Fundamentals & Rules</h3>
+                            <p class="text-gray-500 text-sm">Everything you need to know before your first match: grip, walls, and scoring system.</p>
+                        </div>
+                    </a>
+
+                    <!-- Artículo Destacado 2 -->
+                    <a href="empunadura-continental-padel-errores.html" class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group flex flex-col sm:flex-row">
+                        <div class="w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                            <img src="monitor-padel-valencia.avif" alt="Manu Carrilero correcting padel grip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 md:p-8 w-full sm:w-3/5 flex flex-col justify-center">
+                            <span class="text-padel-600 text-xs font-bold uppercase tracking-widest mb-2 block">Biomechanics</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">The Padel Grip: The "Invisible Error"</h3>
+                            <p class="text-gray-500 text-sm">Discover why the continental grip is non-negotiable and how to correct your hold.</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-10 text-center md:hidden">
+                    <a href="blog.html" class="inline-flex items-center gap-2 bg-white border-2 border-padel-600 text-padel-900 px-8 py-3 rounded-full font-bold hover:bg-padel-600 hover:text-white transition-all shadow-sm">
+                        View all articles <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                </div>
             </div>
-            <p class="text-xs text-slate-500 mt-1">100% focused attention and meticulous biomechanical refinement.</p>
+        </section>
 
-            <div class="my-6 border-t border-slate-100"></div>
+<footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Columna 1: Info y Redes -->
+            <div>
+                <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
+                <div class="flex gap-4 flex-wrap mt-4">
+                    <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="text-padel-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-bold">
+                        <i data-lucide="instagram" class="h-5 w-5"></i> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
+                        <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
+                    </a>
+                </div>
+                <p class="text-sm mb-6 mt-4 text-gray-400">Taking your padel level to the next step. Technical, tactical and dynamic coaching.</p>
+            </div>
+            
+            <!-- Columna 2: Ubicación + SEO LOCAL -->
+            <div>
+                <h4 class="text-white font-bold mb-4 text-lg">Training Location</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="h-5 w-5 text-padel-500 shrink-0 mt-1"></i> 
+                        <span>
+                            <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
+                                <strong>Elite 22 Paterna</strong><br>Valencia, Spain<br>
+                                <span class="text-padel-500 underline">View on Google Maps</span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+                
+                <!-- NUEVO BLOQUE SEO LOCAL -->
+                <div class="mt-5 pt-5 border-t border-gray-800">
+                    <p class="text-xs leading-relaxed text-gray-500">
+                        Lessons take place at <strong>Elite 22 (Paterna)</strong> facilities. Easily accessible club with free parking, less than 10 minutes away for players from <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella and Valencia city</strong>.
+                    </p>
+                </div>
+                <!-- FIN DEL BLOQUE SEO LOCAL -->
+            </div>
 
-            <ul class="space-y-3 text-sm text-slate-600">
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>1 fixed recurring weekly session (1 hour solo)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Indoor court included at Elite 22</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Continuous video analysis and movement assessment</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-emerald-500 font-bold">✓</span>
-                <span>Individualized technical program tailored to your goals</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8">
-            <a href="https://wa.me/34622041911?text=Hello%20Manu,%20I%20am%20interested%20in%20private%20lessons%20(%E2%82%AC165/month)" target="_blank" class="w-full block py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-center transition">
-              Request Private Slot
-            </a>
-          </div>
+            <!-- Columna 3: Contacto -->
+            <div>
+                <h4 class="text-white font-bold mb-4 text-lg">Direct Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
+                    </li>
+                    <li>
+                        <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
+                            <i data-lucide="message-circle" class="h-4 w-4"></i> Text me on WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
+    </footer>
 
-      </div>
+    </main>
 
-      <!-- Footnote and Terms link -->
-      <div class="mt-12 text-center text-sm text-slate-500">
-        <span>* Want to assess your technical level before committing? Single diagnostic session: <strong>€40</strong> (court included).</span>
-        <div class="mt-3">
-          <a href="/en/terms.html" class="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-medium underline underline-offset-4">
-            Check our complete service terms and rescheduling policy here →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        // Al usar defer en el script de Lucide, esperamos a que el documento cargue para crear los iconos
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Lógica del menú móvil
+            const btnMenu = document.getElementById('btn-menu');
+            const menuMovil = document.getElementById('menu-movil');
+            const linksMovil = document.querySelectorAll('.link-movil');
 
-  <!-- Standardized Local SEO Footer -->
-  <footer class="bg-slate-900 text-slate-400 text-sm py-12 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-        <div>
-          <h4 class="text-white font-bold mb-3">Manu Carrilero Padel</h4>
-          <p class="text-xs leading-relaxed text-slate-400">
-            Certified English-speaking padel coach (Sports Science Degree). Technical, tactical, and injury-free padel coaching in Valencia and Paterna.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-white font-bold mb-3">Facility Location</h4>
-          <p class="text-xs leading-relaxed text-slate-400">
-            Elite 22 Padel Club<br>
-            Paterna, Valencia (Enclosed indoor courts)
-          </p>
-        </div>
-        <div>
-          <h4 class="text-white font-bold mb-3">Service Areas</h4>
-          <ul class="text-xs space-y-1 text-slate-400">
-            <li>Padel lessons in Paterna</li>
-            <li>English padel coach in Valencia</li>
-            <li>La Eliana & San Antonio de Benagéber</li>
-            <li>Bétera, Burjassot & Godella</li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-white font-bold mb-3">Student Information</h4>
-          <ul class="text-xs space-y-2 text-slate-400">
-            <li><a href="/en/terms.html" class="hover:text-emerald-400 transition">Service Terms & Rescheduling</a></li>
-            <li><a href="https://wa.me/34622041911?text=Hello%20Manu" target="_blank" class="hover:text-emerald-400 transition">WhatsApp: +34 622 04 19 11</a></li>
-            <li><span>Elite 22, Paterna (Valencia)</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
-        <p>© 2026 Padel Lessons Valencia · Manu Carrilero. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+            if(btnMenu && menuMovil) {
+                btnMenu.addEventListener('click', () => {
+                    menuMovil.classList.toggle('hidden');
+                });
 
+                linksMovil.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuMovil.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
