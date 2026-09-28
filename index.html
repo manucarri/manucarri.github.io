@@ -10,6 +10,9 @@
     <meta name="description" content="Clases de pádel en Valencia (Elite 22). Mejora tu técnica con Manu Carrilero, Licenciado CAFE/CAFD. Individuales y grupos.">
     <meta name="keywords" content="profesor de padel valencia, clases de padel paterna, elite 22 paterna, monitor padel, manu carrilero, profesor padel, padel teacher, clases padel ingles">
     
+    <!-- Preload de la imagen principal (LCP) para carga instantánea -->
+    <link rel="preload" as="image" href="clases-padel-valencia.avif" fetchpriority="high">
+
     <!-- Etiquetas SEO Canónicas, OpenGraph y Hreflang (Idiomas) -->
     <link rel="canonical" href="https://clasespadelvalencia.com/" />
     <link rel="alternate" hreflang="es" href="https://clasespadelvalencia.com/" />
@@ -44,27 +47,73 @@
     }
     </script>
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        padel: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d', accent: '#f59e0b' }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- CSS Compilado Crítico (0ms de bloqueo de renderizado) -->
     <style>
-        html { scroll-behavior: smooth; }
+        *,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+        html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;scroll-behavior:smooth}
+        body{margin:0;line-height:inherit}
+        h1,h2,h3,h4,p,ul{margin:0;padding:0}
+        ul{list-style:none}
+        a{color:inherit;text-decoration:inherit}
+        button{font-family:inherit;font-size:100%;line-height:inherit;color:inherit;margin:0;padding:0;background-color:transparent;background-image:none;cursor:pointer}
+        img,svg{display:block;vertical-align:middle}
+        img{max-width:100%;height:auto}
+        
+        /* Utilidades de Layout y Posicionamiento */
+        .fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}
+        .inset-0{top:0;right:0;bottom:0;left:0}.top-0{top:0}.right-0{right:0}.bottom-5{bottom:1.25rem}.right-5{right:1.25rem}.-bottom-6{bottom:-1.5rem}.-right-6{right:-1.5rem}
+        .z-10{z-index:10}.z-50{z-index:50}
+        .mx-auto{margin-left:auto;margin-right:auto}.mt-auto{margin-top:auto}
+        .mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}
+        .mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.mt-10{margin-top:2.5rem}
+        .block{display:block}.inline-flex{display:inline-flex}.flex{display:flex}.grid{display:grid}.hidden{display:none}
+        .h-3\.5{height:.875rem}.w-3\.5{width:.875rem}.h-4{height:1rem}.w-4{width:1rem}.h-5{height:1.25rem}.w-5{width:1.25rem}.h-6{height:1.5rem}.w-6{width:1.5rem}.h-7{height:1.75rem}.w-7{width:1.75rem}.h-8{height:2rem}.w-8{width:2rem}.h-10{height:2.5rem}.w-10{width:2.5rem}.h-12{height:3rem}.w-12{width:3rem}.h-20{height:5rem}.h-40{height:10rem}.h-48{height:12rem}.h-auto{height:auto}.h-full{height:100%}.min-h-screen{min-height:100vh}
+        .w-full{width:100%}.min-w-\[85\%\]{min-width:85%}.max-w-sm{max-width:24rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}
+        .flex-grow{flex-grow:1}.shrink-0{flex-shrink:0}.order-first{order:-9999}
+        .rotate-3{transform:rotate(3deg)}.transform{transform:translateZ(0)}
+        .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+        .flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}
+        .gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}
+        .space-y-2>:not([hidden])~:not([hidden]){margin-top:.5rem}.space-y-3>:not([hidden])~:not([hidden]){margin-top:.75rem}.space-y-4>:not([hidden])~:not([hidden]){margin-top:1rem}
+        .overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}
+        .snap-x{scroll-snap-type:x mandatory}.snap-center{scroll-snap-align:center}
+        .rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-bl-xl{border-bottom-left-radius:.75rem}.rounded-tr-3xl{border-top-right-radius:1.5rem}
+        .border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-t-8{border-top-width:8px}
+        .object-cover{object-fit:cover}
+        .p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}
+        .px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}
+        .py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}
+        .pt-2{padding-top:.5rem}.pt-5{padding-top:1.25rem}.pb-2{padding-bottom:.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pr-4{padding-right:1rem}
+        
+        /* Tipografía y Colores */
+        .text-center{text-align:center}.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}
+        .font-medium{font-weight:500}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-black{font-weight:900}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        
+        .bg-white{background-color:#fff}.bg-black{background-color:#000}.bg-transparent{background-color:transparent}.bg-gray-50{background-color:#f9fafb}.bg-gray-200{background-color:#e5e7eb}.bg-gray-950{background-color:#030712}.bg-blue-50{background-color:#eff6ff}.bg-green-500{background-color:#22c55e}.bg-green-600{background-color:#16a34a}.bg-padel-50{background-color:#f0fdf4}.bg-padel-100{background-color:#dcfce7}.bg-padel-600{background-color:#16a34a}.bg-padel-800{background-color:#166534}.bg-padel-900{background-color:#14532d}.bg-padel-accent{background-color:#f59e0b}
+        .border-white{border-color:#fff}.border-white\/10{border-color:rgba(255,255,255,.1)}.border-gray-100{border-color:#f3f4f6}.border-gray-200{border-color:#e5e7eb}.border-gray-800{border-color:#1f2937}.border-green-400{border-color:#4ade80}.border-padel-100{border-color:#dcfce7}.border-padel-500{border-color:#22c55e}.border-padel-600{border-color:#16a34a}.border-padel-700{border-color:#15803d}.border-padel-800{border-color:#166534}.border-padel-accent{border-color:#f59e0b}
+        .text-white{color:#fff}.text-gray-200{color:#e5e7eb}.text-gray-300{color:#d1d5db}.text-gray-400{color:#9ca3af}.text-gray-600{color:#4b5563}.text-gray-700{color:#374151}.text-gray-800{color:#1f2937}.text-gray-900{color:#111827}.text-blue-600{color:#2563eb}.text-yellow-400{color:#facc15}.text-green-50{color:#f0fdf4}.text-green-200{color:#bbf7d0}.text-padel-500{color:#22c55e}.text-padel-600{color:#16a34a}.text-padel-900{color:#14532d}.text-padel-accent{color:#f59e0b}
+        
+        .opacity-20{opacity:.2}.opacity-80{opacity:.8}.opacity-90{opacity:.9}
+        .shadow-sm{box-shadow:0 1px 2px 0 rgba(0,0,0,.05)}.shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,.1)}.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}.shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,.1)}.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+        .transition-all{transition:all .15s cubic-bezier(.4,0,.2,1)}.transition-colors{transition:color .15s,background-color .15s,border-color .15s}.transition-opacity{transition:opacity .15s}.transition-shadow{transition:box-shadow .15s}.transition-transform{transition:transform .3s}
+        .hover\:scale-105:hover{transform:scale(1.05)}.hover\:bg-gray-200:hover{background-color:#e5e7eb}.hover\:bg-gray-300:hover{background-color:#d1d5db}.hover\:bg-yellow-400:hover{background-color:#facc15}.hover\:bg-green-500:hover{background-color:#22c55e}.hover\:bg-green-600:hover{background-color:#16a34a}.hover\:bg-green-800:hover{background-color:#166534}.hover\:bg-padel-50:hover{background-color:#f0fdf4}.hover\:bg-padel-600:hover{background-color:#16a34a}.hover\:text-white:hover{color:#fff}.hover\:text-padel-600:hover{color:#16a34a}.hover\:text-padel-900:hover{color:#14532d}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-lg:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}.hover\:shadow-xl:hover{box-shadow:0 20px 25px -5px rgba(0,0,0,.1)}
+        .group:hover .group-hover\:scale-105{transform:scale(1.05)}.group:hover .group-hover\:text-padel-600{color:#16a34a}.group:hover .group-hover\:opacity-100{opacity:1}
+
         .hero-pattern { background-color: #14532d; background-image: radial-gradient(#16a34a 1px, transparent 1px); background-size: 24px 24px; }
         .smooth-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); }
-        /* Ocultar barra de scroll en carruseles móviles manteniendo funcionalidad */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Media Queries Responsivas */
+        @media (min-width: 640px) {
+            .sm\:block{display:block}.sm\:flex{display:flex}.sm\:h-48{height:12rem}.sm\:h-auto{height:auto}.sm\:w-2\/5{width:40%}.sm\:w-3\/5{width:60%}.sm\:min-w-\[60\%\]{min-width:60%}.sm\:min-w-\[70\%\]{min-width:70%}.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}
+        }
+        @media (min-width: 768px) {
+            .md\:flex{display:flex}.md\:grid{display:grid}.md\:hidden{display:none}.md\:w-1\/2{width:50%}.md\:min-w-0{min-width:0}.md\:order-none{order:0}.md\:-translate-y-4{transform:translateY(-1rem)}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:flex-col{flex-direction:column}.md\:p-8{padding:2rem}.md\:pb-0{padding-bottom:0}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}
+        }
+        @media (min-width: 1024px) {
+            .lg\:w-1\/2{width:50%}.lg\:w-5\/12{width:41.666667%}.lg\:w-7\/12{width:58.333333%}.lg\:max-w-none{max-width:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-end{justify-content:flex-end}.lg\:gap-4{gap:1rem}.lg\:gap-6{gap:1.5rem}.lg\:gap-8{gap:2rem}.lg\:gap-12{gap:3rem}.lg\:gap-16{gap:4rem}.lg\:p-8{padding:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-20{padding-top:5rem;padding-bottom:5rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:py-28{padding-top:7rem;padding-bottom:7rem}.lg\:mb-12{margin-bottom:3rem}.lg\:mb-14{margin-bottom:3.5rem}.lg\:mb-16{margin-bottom:4rem}.lg\:mt-12{margin-top:3rem}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}.lg\:text-6xl{font-size:3.75rem;line-height:1}
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -73,21 +122,19 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-HT4WB8DKEV');
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <i data-lucide="tennis" class="h-8 w-8 text-padel-600"></i>
+                <svg class="h-8 w-8 text-padel-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5c2.5-2.5 6.5-2.5 9 0"/><path d="M6.5 15.5c2.5 2.5 6.5 2.5 9 0"/></svg>
                 <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
             </div>
             
-            <!-- Menú reordenado según la nueva estructura visual -->
-            <nav class="hidden md:flex gap-8 font-medium text-gray-600">
+            <nav aria-label="Navegación principal" class="hidden md:flex gap-8 font-medium text-gray-600">
                 <a href="#tarifas" class="hover:text-padel-600 transition-colors">Tarifas</a>
                 <a href="#opiniones" class="hover:text-padel-600 transition-colors">Opiniones</a>
                 <a href="#sobre-mi" class="hover:text-padel-600 transition-colors">Sobre Mí & Metodología</a>
@@ -96,16 +143,16 @@
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="index-en.html" class="hidden md:flex items-center gap-2 text-gray-500 hover:text-padel-600 font-bold transition-colors border-r border-gray-200 pr-4">
-                    <span class="text-xl">🇬🇧</span> English Version
+                <a href="index-en.html" class="hidden md:flex items-center gap-2 text-gray-600 hover:text-padel-600 font-bold transition-colors border-r border-gray-200 pr-4">
+                    <span class="text-xl" aria-hidden="true">🇬🇧</span> English Version
                 </a>
                 
-                <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'header_escritorio'});" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
-                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'header_escritorio'});" target="_blank" class="hidden sm:flex bg-green-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-500 transition-colors shadow-md items-center gap-2">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp
                 </a>
                 
-                <button id="btn-menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
-                    <i data-lucide="menu" class="h-7 w-7"></i>
+                <button id="btn-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-movil" class="md:hidden text-gray-900 hover:text-padel-600 p-2">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                 </button>
             </div>
         </div>
@@ -113,15 +160,15 @@
         <div id="menu-movil" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
             <div class="px-4 pt-2 pb-6 flex flex-col space-y-2">
                 <a href="index-en.html" class="block px-4 py-3 text-base font-bold text-gray-700 bg-gray-50 hover:text-padel-600 rounded-xl flex items-center gap-2">
-                    <span class="text-xl">🇬🇧</span> English Version
+                    <span class="text-xl" aria-hidden="true">🇬🇧</span> English Version
                 </a>
                 <a href="#tarifas" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Tarifas</a>
                 <a href="#opiniones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Opiniones</a>
                 <a href="#sobre-mi" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Sobre Mí & Metodología</a>
                 <a href="#titulaciones" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Acreditaciones</a>
                 <a href="blog.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Ir al Blog</a>
-                <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'menu_movil'});" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-500 rounded-xl text-center flex justify-center gap-2">
-                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'menu_movil'});" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-600 rounded-xl text-center flex justify-center gap-2">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp
                 </a>
             </div>
         </div>
@@ -137,7 +184,7 @@
                         <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide hover:bg-gray-200 transition-colors">
                             Elite 22 Paterna
                         </a>
-                        <span class="flex items-center gap-1 text-sm font-medium"><span class="text-2xl">🇪🇸</span> / <span class="text-2xl">🇬🇧</span> Clases bilingües</span>
+                        <span class="flex items-center gap-1 text-sm font-medium"><span class="text-2xl" aria-hidden="true">🇪🇸</span> / <span class="text-2xl" aria-hidden="true">🇬🇧</span> Clases bilingües</span>
                     </div>
                     
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight text-white">
@@ -161,7 +208,12 @@
                 <div class="lg:w-1/2 flex justify-center lg:justify-end">
                     <div class="relative w-full max-w-md">
                         <div class="absolute inset-0 bg-padel-accent rounded-3xl rotate-3 opacity-20"></div>
-                        <img src="clases-padel-valencia.avif" alt="Clases de pádel en Valencia con Manu Carrilero y máquina lanzapelotas" class="relative z-10 w-full h-auto object-cover rounded-3xl shadow-2xl border-4 border-white/10">
+                        <img src="clases-padel-valencia.avif" 
+                             alt="Clases de pádel en Valencia con Manu Carrilero y máquina lanzapelotas" 
+                             fetchpriority="high" 
+                             width="651" 
+                             height="468" 
+                             class="relative z-10 w-full h-auto object-cover rounded-3xl shadow-2xl border-4 border-white/10">
                     </div>
                 </div>
             </div>
@@ -179,32 +231,32 @@
                     <!-- Tarjeta Individual -->
                     <div class="bg-gray-50 rounded-3xl p-7 lg:p-8 border border-gray-200 hover:shadow-xl transition-shadow flex flex-col relative overflow-hidden">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Individual</h3>
-                        <p class="text-gray-500 mb-6">Atención 100% personalizada y corrección milimétrica para ti.</p>
+                        <p class="text-gray-600 mb-6">Atención 100% personalizada y corrección milimétrica para ti.</p>
                         <div class="mb-6">
                             <span class="text-5xl font-black text-gray-900">165€</span>
-                            <span class="text-gray-500 font-medium">/ mes</span>
+                            <span class="text-gray-600 font-medium">/ mes</span>
                         </div>
                         <ul class="space-y-4 mb-8 flex-grow text-gray-700 font-medium">
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5 shrink-0"></i> 1 sesión fija semanal (1h)</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5 shrink-0"></i> Pista cubierta en Elite 22</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5 shrink-0"></i> Análisis biomecánico en vídeo</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-600 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> 1 sesión fija semanal (1h)</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-600 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Pista cubierta en Elite 22</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-600 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Análisis biomecánico en vídeo</li>
                         </ul>
                         <a href="https://wa.me/34622041911?text=Hola%20Manu,%20me%20interesa%20la%20cuota%20mensual%20individual" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_individual'});" class="block w-full bg-padel-900 text-white text-center py-4 rounded-xl font-bold hover:bg-padel-600 transition-colors">Consultar huecos</a>
                     </div>
 
-                    <!-- Tarjeta Grupo (PRIMERA EN MÓVIL gracias a order-first md:order-none) -->
+                    <!-- Tarjeta Grupo (PRIMERA EN MÓVIL) -->
                     <div class="order-first md:order-none bg-padel-900 rounded-3xl p-7 lg:p-8 border border-padel-800 shadow-2xl flex flex-col relative transform md:-translate-y-4">
                         <div class="absolute top-0 right-0 bg-padel-accent text-padel-900 font-bold text-xs uppercase tracking-wider py-1 px-4 rounded-bl-xl rounded-tr-3xl">Más Popular</div>
                         <h3 class="text-2xl font-bold text-white mb-2">Grupo Reducido</h3>
-                        <p class="text-gray-300 mb-6">3 a 5 personas. Crea tu propio grupo o únete a uno ya existente.</p>
+                        <p class="text-gray-200 mb-6">3 a 5 personas. Crea tu propio grupo o únete a uno ya existente.</p>
                         <div class="mb-6 text-white">
                             <span class="text-5xl font-black">69€</span>
-                            <span class="text-gray-400 font-medium">/ mes / pers.</span>
+                            <span class="text-gray-300 font-medium">/ mes / pers.</span>
                         </div>
                         <ul class="space-y-4 mb-8 flex-grow text-gray-200 font-medium">
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5 shrink-0"></i> 1 sesión fija semanal (1h)</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5 shrink-0"></i> Pista cubierta en Elite 22</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-accent h-5 w-5 shrink-0"></i> Máximo dinamismo y rentabilidad</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-accent h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> 1 sesión fija semanal (1h)</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-accent h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Pista cubierta en Elite 22</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-accent h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Máximo dinamismo y rentabilidad</li>
                         </ul>
                         <a href="https://wa.me/34622041911?text=Hola%20Manu,%20me%20interesa%20unirme%20a%20un%20grupo%20reducido" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_grupo'});" class="block w-full bg-padel-accent text-padel-900 text-center py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors shadow-lg">Preguntar disponibilidad</a>
                     </div>
@@ -212,73 +264,72 @@
                     <!-- Tarjeta Pareja -->
                     <div class="bg-gray-50 rounded-3xl p-7 lg:p-8 border border-gray-200 hover:shadow-xl transition-shadow flex flex-col relative overflow-hidden">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Pareja</h3>
-                        <p class="text-gray-500 mb-6">Ven con tu compañer@ de torneos y trabajad táctica de equipo.</p>
+                        <p class="text-gray-600 mb-6">Ven con tu compañer@ de torneos y trabajad táctica de equipo.</p>
                         <div class="mb-6">
                             <span class="text-5xl font-black text-gray-900">95€</span>
-                            <span class="text-gray-500 font-medium">/ mes / pers.</span>
+                            <span class="text-gray-600 font-medium">/ mes / pers.</span>
                         </div>
                         <ul class="space-y-4 mb-8 flex-grow text-gray-700 font-medium">
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5 shrink-0"></i> 1 sesión fija semanal (1h)</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5 shrink-0"></i> Pista cubierta en Elite 22</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-padel-500 h-5 w-5 shrink-0"></i> Estrategia y transiciones</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-600 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> 1 sesión fija semanal (1h)</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-600 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Pista cubierta en Elite 22</li>
+                            <li class="flex items-center gap-3"><svg class="text-padel-600 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Estrategia y transiciones</li>
                         </ul>
-                        <a href="https://wa.me/34622041911?text=Hola%20Manu,%20me%20interesa%20la%20cuota%20en%20pareja" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_pareja'});" class="block w-full bg-gray-200 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-300 transition-colors">Reservar plaza</a>
+                        <a href="https://wa.me/34622041911?text=Hola%20Manu,%20me%20interesa%20la%20cuota%20en%20pareja" onclick="gtag('event', 'clic_whatsapp', {'origen': 'tarifa_pareja'});" class="block w-full bg-gray-200 text-gray-900 text-center py-4 rounded-xl font-bold hover:bg-gray-300 transition-colors">Reservar plaza</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. OPINIONES Y FOTOS REALES (Subido justo debajo de Tarifas para conversión inmediata) -->
+        <!-- 2. OPINIONES Y FOTOS REALES -->
         <section id="opiniones" class="py-16 lg:py-20 bg-padel-900 text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10 lg:mb-14">
                     <h2 class="text-3xl font-extrabold mb-3">Lo que dicen mis alumn@s</h2>
-                    <div class="flex justify-center items-center gap-1 text-yellow-400">
-                        <i data-lucide="star" class="h-6 w-6 fill-current"></i>
-                        <i data-lucide="star" class="h-6 w-6 fill-current"></i>
-                        <i data-lucide="star" class="h-6 w-6 fill-current"></i>
-                        <i data-lucide="star" class="h-6 w-6 fill-current"></i>
-                        <i data-lucide="star" class="h-6 w-6 fill-current"></i>
+                    <div class="flex justify-center items-center gap-1 text-yellow-400" role="img" aria-label="Valoración de 5 sobre 5 estrellas">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                     </div>
                 </div>
 
-                <!-- En móvil es un carrusel deslizable para ahorrar scroll; en escritorio es grid de 4 -->
-                <div class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 no-scrollbar">
+                <div class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 overflow-x-auto snap-x pb-4 md:pb-0 no-scrollbar">
                     <div class="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
-                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"Empecé hace un mes y medio las clases para principiantes. Manu tiene muy claro el punto del que partes... adapta las clases para que mejores sin frustrarte y acabes siempre con una sensación positiva."</p>
+                        <p class="text-gray-200 text-sm italic mb-4 flex-grow">"Empecé hace un mes y medio las clases para principiantes. Manu tiene muy claro el punto del que partes... adapta las clases para que mejores sin frustrarte y acabes siempre con una sensación positiva."</p>
                         <div class="font-bold text-white text-sm flex items-center gap-3">
-                            <img src="grupos-padel-valencia.avif" class="w-10 h-10 rounded-full object-cover border-2 border-padel-500" alt="Alumnas de pádel en Valencia"> Lourdes
+                            <img src="grupos-padel-valencia.avif" loading="lazy" decoding="async" width="40" height="40" class="w-10 h-10 rounded-full object-cover border-2 border-padel-500" alt="Alumnas de pádel en Valencia"> Lourdes
                         </div>
                     </div>
                     <div class="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
-                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"Llevo muchos años con Manu. Un gran profesional en todas las facetas. Siempre atento a mi progresión y me ha ayudado a recuperarme de dos lesiones distintas. Muy recomendable."</p>
+                        <p class="text-gray-200 text-sm italic mb-4 flex-grow">"Llevo muchos años con Manu. Un gran profesional en todas las facetas. Siempre atento a mi progresión y me ha ayudado a recuperarme de dos lesiones distintas. Muy recomendable."</p>
                         <div class="font-bold text-white text-sm flex items-center gap-3">
-                            <img src="profesor-padel-valencia.avif" class="w-10 h-10 rounded-full object-cover border-2 border-padel-500" alt="Clases divertidas de pádel"> Pablo Capó
+                            <img src="profesor-padel-valencia.avif" loading="lazy" decoding="async" width="40" height="40" class="w-10 h-10 rounded-full object-cover border-2 border-padel-500" alt="Clases divertidas de pádel"> Pablo Capó
                         </div>
                     </div>
                     <div class="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
-                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"Excelente entrenador 💪 nos enseña al máximo, dedicación y paciencia 👌"</p>
+                        <p class="text-gray-200 text-sm italic mb-4 flex-grow">"Excelente entrenador 💪 nos enseña al máximo, dedicación y paciencia 👌"</p>
                         <div class="font-bold text-white text-sm flex items-center gap-3">
-                            <div class="w-10 h-10 bg-padel-600 rounded-full flex items-center justify-center">C</div> Carmen Tomelict
+                            <div class="w-10 h-10 bg-padel-600 rounded-full flex items-center justify-center" aria-hidden="true">C</div> Carmen Tomelict
                         </div>
                     </div>
                     <div class="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center bg-padel-800 p-6 rounded-2xl border border-padel-700 flex flex-col">
-                        <p class="text-gray-300 text-sm italic mb-4 flex-grow">"¡Una primera clase de pádel increíble y muy divertida! ¡Súper profesionales! ¡La recomiendo totalmente!"</p>
+                        <p class="text-gray-200 text-sm italic mb-4 flex-grow">"¡Una primera clase de pádel increíble y muy divertida! ¡Súper profesionales! ¡La recomiendo totalmente!"</p>
                         <div class="font-bold text-white text-sm flex items-center gap-3">
-                            <div class="w-10 h-10 bg-padel-600 rounded-full flex items-center justify-center">C</div> Cas Marckelbach
+                            <div class="w-10 h-10 bg-padel-600 rounded-full flex items-center justify-center" aria-hidden="true">C</div> Cas Marckelbach
                         </div>
                     </div>
                 </div>
-                <p class="text-center text-xs text-green-300/80 mt-1 md:hidden flex items-center justify-center gap-1">
-                    Desliza para ver más opiniones <i data-lucide="move-right" class="h-3.5 w-3.5"></i>
+                <p class="text-center text-xs text-green-200 mt-1 md:hidden flex items-center justify-center gap-1">
+                    Desliza para ver más opiniones <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </p>
                 
                 <!-- Galería en pista -->
                 <div class="mt-8 lg:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4">
-                    <img src="aprender-padel-valencia.avif" alt="Recogiendo bolas de pádel en clase" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
-                    <img src="grupos-padel-valencia.avif" alt="Grupo de clases de pádel en Valencia" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
-                    <img src="profesor-padel-valencia.avif" alt="Profesor de pádel impartiendo clase" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
-                    <img src="opiniones-padel-clases-valencia.avif" alt="Opiniones de alumnas de pádel" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
+                    <img src="aprender-padel-valencia.avif" loading="lazy" decoding="async" width="320" height="192" alt="Recogiendo bolas de pádel en clase" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
+                    <img src="grupos-padel-valencia.avif" loading="lazy" decoding="async" width="320" height="192" alt="Grupo de clases de pádel en Valencia" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
+                    <img src="profesor-padel-valencia.avif" loading="lazy" decoding="async" width="320" height="192" alt="Profesor de pádel impartiendo clase" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
+                    <img src="opiniones-padel-clases-valencia.avif" loading="lazy" decoding="async" width="320" height="192" alt="Opiniones de alumnas de pádel" class="rounded-xl h-40 sm:h-48 w-full object-cover opacity-90 hover:opacity-100 transition-opacity">
                 </div>
             </div>
         </section>
@@ -288,13 +339,15 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                 <div class="lg:w-5/12 w-full max-w-sm lg:max-w-none mx-auto">
                     <div class="relative">
-                        <img src="manu-carrilero-padel-valencia.avif" alt="Manu Carrilero, profesor de pádel en Valencia" class="rounded-3xl shadow-xl w-full object-cover border-4 border-white">
+                        <img src="manu-carrilero-padel-valencia.avif" loading="lazy" decoding="async" width="480" height="580" alt="Manu Carrilero, profesor de pádel en Valencia" class="rounded-3xl shadow-xl w-full object-cover border-4 border-white">
                         <div class="absolute -bottom-6 -right-6 bg-white p-5 rounded-2xl shadow-xl border border-gray-100 hidden sm:block">
                             <div class="flex items-center gap-4">
-                                <div class="bg-blue-50 text-blue-600 p-3 rounded-xl"><i data-lucide="graduation-cap" class="h-8 w-8"></i></div>
+                                <div class="bg-blue-50 text-blue-600 p-3 rounded-xl">
+                                    <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                                </div>
                                 <div>
                                     <p class="font-black text-gray-900 text-lg leading-tight">CAFE/CAFD</p>
-                                    <p class="text-sm text-gray-500 font-medium">Ciencias del Deporte</p>
+                                    <p class="text-sm text-gray-600 font-medium">Ciencias del Deporte</p>
                                 </div>
                             </div>
                         </div>
@@ -305,20 +358,20 @@
                     <span class="text-padel-600 font-bold tracking-widest uppercase text-sm mb-2 block">Sobre Mí</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">Más de 20 años en la pista. <br>Una década dedicada a enseñarte.</h2>
                     
-                    <div class="space-y-4 text-base lg:text-lg text-gray-600 mb-8 leading-relaxed">
+                    <div class="space-y-4 text-base lg:text-lg text-gray-700 mb-8 leading-relaxed">
                         <p>Soy Manu Carrilero y llevo el deporte y la docencia en el ADN. Llevo más de dos décadas empuñando una pala y más de 10 años dedicados profesionalmente a que mis alumnos saquen su máximo potencial en la pista.</p>
                         <p>Mi objetivo no es que simplemente "pases la bola". Mi meta es que entiendas el juego. Como <strong>Licenciado en Ciencias de la Actividad Física y del Deporte</strong>, abordo el pádel desde la ciencia, la biomecánica y la progresión estructurada.</p>
                         <p>En mis clases aplicamos una metodología basada en el análisis táctico, la prevención de lesiones y el uso de vídeo feedback.</p>
                     </div>
                     
                     <a href="sobre-mi.html" class="inline-flex items-center gap-2 bg-white border-2 border-padel-600 text-padel-900 px-8 py-3 rounded-full font-bold hover:bg-padel-600 hover:text-white transition-all shadow-sm">
-                        Conoce mi trayectoria completa <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        Conoce mi trayectoria completa <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 4. ACREDITACIONES OFICIALES (Compactadas en móvil con carrusel para los diplomas) -->
+        <!-- 4. ACREDITACIONES OFICIALES -->
         <section id="titulaciones" class="py-16 lg:py-20 bg-white border-y border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10 lg:mb-16">
@@ -327,45 +380,43 @@
                 </div>
 
                 <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
-                    <!-- Tarjetas de texto más compactas en móvil -->
                     <div class="md:w-1/2 grid gap-4 w-full">
                         <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-2xl smooth-shadow border border-gray-100">
                             <div class="bg-padel-100 text-padel-600 p-2.5 rounded-lg shrink-0">
-                                <i data-lucide="book-open" class="h-6 w-6"></i>
+                                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-base lg:text-lg">Licenciatura Universitaria CAFE/CAFD</h4>
+                                <h3 class="font-bold text-gray-900 text-base lg:text-lg">Licenciatura Universitaria CAFE/CAFD</h3>
                                 <p class="text-gray-600 text-sm mt-1">Formación académica superior en Ciencias de la Actividad Física y del Deporte (2007-2012) y Máster en docencia e investigación deportiva.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-2xl smooth-shadow border border-gray-100">
                             <div class="bg-padel-100 text-padel-600 p-2.5 rounded-lg shrink-0">
-                                <i data-lucide="award" class="h-6 w-6"></i>
+                                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-base lg:text-lg">Asociación de Profesionales de Padel (APA)</h4>
+                                <h3 class="font-bold text-gray-900 text-base lg:text-lg">Asociación de Profesionales de Padel (APA)</h3>
                                 <p class="text-gray-600 text-sm mt-1">Certificado oficial de Monitor de Pádel (2013), formación intensiva dictada por Jorge Nicolini y Máximo Castellote.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-2xl smooth-shadow border border-gray-100">
                             <div class="bg-padel-100 text-padel-600 p-2.5 rounded-lg shrink-0">
-                                <i data-lucide="shield-check" class="h-6 w-6"></i>
+                                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-base lg:text-lg">MM Academy Coach</h4>
+                                <h3 class="font-bold text-gray-900 text-base lg:text-lg">MM Academy Coach</h3>
                                 <p class="text-gray-600 text-sm mt-1">Certificación técnica en 2025 bajo la metodología de Manu Martín.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Diplomas: Carrusel horizontal en móvil (1 sola pantalla de alto) y apilados en escritorio -->
                     <div class="md:w-1/2 w-full">
-                        <div class="flex md:flex-col gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory pb-2 no-scrollbar">
-                            <img src="Profesor-padel-titulado-valencia.avif" alt="Certificado Asociación de Profesionales de Padel APA" class="min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center rounded-2xl shadow-md border border-gray-200 w-full hover:scale-105 transition-transform duration-300">
-                            <img src="MM-academy-valencia.avif" alt="Certificado MM Academy Coach Manu Martín" class="min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center rounded-2xl shadow-md border border-gray-200 w-full hover:scale-105 transition-transform duration-300">
+                        <div class="flex md:flex-col gap-4 lg:gap-6 overflow-x-auto snap-x pb-2 no-scrollbar">
+                            <img src="Profesor-padel-titulado-valencia.avif" loading="lazy" decoding="async" width="580" height="410" alt="Certificado Asociación de Profesionales de Padel APA" class="min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center rounded-2xl shadow-md border border-gray-200 w-full hover:scale-105 transition-transform">
+                            <img src="MM-academy-valencia.avif" loading="lazy" decoding="async" width="580" height="410" alt="Certificado MM Academy Coach Manu Martín" class="min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center rounded-2xl shadow-md border border-gray-200 w-full hover:scale-105 transition-transform">
                         </div>
-                        <p class="text-center text-xs text-gray-400 mt-2 md:hidden flex items-center justify-center gap-1">
-                            Desliza para ver los diplomas <i data-lucide="move-right" class="h-3.5 w-3.5"></i>
+                        <p class="text-center text-xs text-gray-600 mt-2 md:hidden flex items-center justify-center gap-1">
+                            Desliza para ver los diplomas <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                         </p>
                     </div>
                 </div>
@@ -381,135 +432,132 @@
                         <p class="text-gray-600 text-base lg:text-lg">Aprende técnica, táctica y metodología fuera de la pista.</p>
                     </div>
                     <a href="blog.html" class="hidden md:flex items-center gap-2 text-padel-600 font-bold hover:text-padel-900 transition-colors">
-                        Ver todos los artículos <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        Ver todos los artículos <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-8">
-                    <!-- Artículo Destacado 1: Guía Principiantes -->
+                    <!-- Artículo Destacado 1 -->
                     <a href="guia-iniciacion-padel.html" class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group flex flex-col sm:flex-row">
                         <div class="w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden relative bg-black">
-                            <img src="aprender-padel-valencia.avif" alt="Clases de iniciación al pádel en Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <img src="aprender-padel-valencia.avif" loading="lazy" decoding="async" width="400" height="260" alt="Clases de iniciación al pádel en Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform opacity-90">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <i data-lucide="play-circle" class="h-12 w-12 text-white opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                                <svg class="h-12 w-12 text-white opacity-80 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                             </div>
                         </div>
                         <div class="p-6 md:p-8 w-full sm:w-3/5 flex flex-col justify-center">
                             <span class="text-padel-600 text-xs font-bold uppercase tracking-widest mb-2 block">Guía y Vídeo</span>
                             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">Guía de Iniciación: Fundamentos y Reglas</h3>
-                            <p class="text-gray-500 text-sm">Todo lo que necesitas saber antes de tu primer partido: empuñadura, paredes y puntuación.</p>
+                            <p class="text-gray-600 text-sm">Todo lo que necesitas saber antes de tu primer partido: empuñadura, paredes y puntuación.</p>
                         </div>
                     </a>
 
-                    <!-- Artículo Destacado 2: Empuñadura -->
+                    <!-- Artículo Destacado 2 -->
                     <a href="empunadura-continental-padel-errores.html" class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group flex flex-col sm:flex-row">
                         <div class="w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
-                            <img src="monitor-padel-valencia.avif" alt="Manu Carrilero corrigiendo la empuñadura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="monitor-padel-valencia.avif" loading="lazy" decoding="async" width="400" height="260" alt="Manu Carrilero corrigiendo la empuñadura" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                         </div>
                         <div class="p-6 md:p-8 w-full sm:w-3/5 flex flex-col justify-center">
                             <span class="text-padel-600 text-xs font-bold uppercase tracking-widest mb-2 block">Biomecánica</span>
                             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-padel-600 transition-colors leading-tight">La empuñadura en pádel: El "error invisible"</h3>
-                            <p class="text-gray-500 text-sm">Descubre por qué la empuñadura continental es innegociable y cómo corregir el agarre.</p>
+                            <p class="text-gray-600 text-sm">Descubre por qué la empuñadura continental es innegociable y cómo corregir el agarre.</p>
                         </div>
                     </a>
                 </div>
                 
                 <div class="mt-10 text-center md:hidden">
                     <a href="blog.html" class="inline-flex items-center gap-2 bg-white border-2 border-padel-600 text-padel-900 px-8 py-3 rounded-full font-bold hover:bg-padel-600 hover:text-white transition-all shadow-sm">
-                        Ver todos los artículos <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        Ver todos los artículos <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-                
-                <!-- Columna 1: Info y Redes -->
-                <div>
-                    <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
-                    <div class="flex gap-4 flex-wrap mt-4">
-                        <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="text-padel-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-bold">
-                            <i data-lucide="instagram" class="h-5 w-5"></i> Instagram
-                        </a>
-                        <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
-                            <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
-                        </a>
-                    </div>
-                    <p class="text-sm mb-6 mt-4 text-gray-400">Llevando tu nivel de pádel al siguiente escalón. Clases técnicas, tácticas y dinámicas.</p>
-                </div>
-                
-                <!-- Columna 2: Ubicación + SEO LOCAL -->
-                <div>
-                    <h4 class="text-white font-bold mb-4 text-lg">Ubicación de Entrenamiento</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="map-pin" class="h-5 w-5 text-padel-500 shrink-0 mt-1"></i> 
-                            <span>
-                                <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
-                                    <strong>Elite 22 Paterna</strong><br>Valencia, España<br>
-                                    <span class="text-padel-500 underline">Ver en Google Maps</span>
-                                </a>
-                            </span>
-                        </li>
-                    </ul>
-                    
-                    <div class="mt-5 pt-5 border-t border-gray-800">
-                        <p class="text-xs leading-relaxed text-gray-500">
-                            Clases impartidas en las instalaciones de <strong>Elite 22 (Paterna)</strong>. Club de fácil acceso y parking gratuito, a menos de 10 minutos para jugadores de <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella y Valencia capital</strong>.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Columna 3: Contacto -->
-                <div>
-                    <h4 class="text-white font-bold mb-4 text-lg">Contacto Directo</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
-                        </li>
-                        <li>
-                            <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
-                                <i data-lucide="message-circle" class="h-4 w-4"></i> Escríbeme por WhatsApp
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-        </footer>
-
     </main>
+
+    <footer class="bg-gray-950 text-gray-300 py-12 border-t-8 border-padel-accent mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Columna 1: Info y Redes -->
+            <div>
+                <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
+                <div class="flex gap-4 flex-wrap mt-4">
+                    <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="text-padel-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-bold">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-300 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
+                    </a>
+                </div>
+                <p class="text-sm mb-6 mt-4 text-gray-300">Llevando tu nivel de pádel al siguiente escalón. Clases técnicas, tácticas y dinámicas.</p>
+            </div>
+            
+            <!-- Columna 2: Ubicación + SEO LOCAL -->
+            <div>
+                <h2 class="text-white font-bold mb-4 text-lg">Ubicación de Entrenamiento</h2>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3">
+                        <svg class="h-5 w-5 text-padel-500 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>
+                            <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
+                                <strong>Elite 22 Paterna</strong><br>Valencia, España<br>
+                                <span class="text-padel-500 underline">Ver en Google Maps</span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+                
+                <div class="mt-5 pt-5 border-t border-gray-800">
+                    <p class="text-xs leading-relaxed text-gray-400">
+                        Clases impartidas en las instalaciones de <strong>Elite 22 (Paterna)</strong>. Club de fácil acceso y parking gratuito, a menos de 10 minutos para jugadores de <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella y Valencia capital</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div>
+                <h2 class="text-white font-bold mb-4 text-lg">Contacto Directo</h2>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3">
+                        <svg class="h-5 w-5 text-padel-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +34 622 04 19 11
+                    </li>
+                    <li>
+                        <a href="https://wa.me/34622041911" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Escríbeme por WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
 
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="https://wa.me/34622041911?text=Hola%20Manu,%20estoy%20viendo%20tu%20web%20y%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20para%20clases" 
        onclick="gtag('event', 'clic_whatsapp', {'origen': 'boton_flotante'});" 
        target="_blank" 
        aria-label="Contactar por WhatsApp"
-       class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 font-bold transition-all duration-300 hover:scale-105 border-2 border-white">
-        <i data-lucide="message-circle" class="h-6 w-6 fill-current"></i>
+       class="fixed bottom-5 right-5 z-50 bg-green-600 hover:bg-green-500 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 font-bold transition-all hover:scale-105 border-2 border-white">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
         <span class="text-sm sm:text-base">¿Hablamos?</span>
     </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-            
-            // Lógica del menú móvil
             const btnMenu = document.getElementById('btn-menu');
             const menuMovil = document.getElementById('menu-movil');
             const linksMovil = document.querySelectorAll('.link-movil');
 
             if(btnMenu && menuMovil) {
                 btnMenu.addEventListener('click', () => {
-                    menuMovil.classList.toggle('hidden');
+                    const isHidden = menuMovil.classList.toggle('hidden');
+                    btnMenu.setAttribute('aria-expanded', !isHidden);
                 });
 
                 linksMovil.forEach(link => {
                     link.addEventListener('click', () => {
                         menuMovil.classList.add('hidden');
+                        btnMenu.setAttribute('aria-expanded', 'false');
                     });
                 });
             }
