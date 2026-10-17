@@ -142,6 +142,9 @@
         a{color:inherit;text-decoration:inherit}
         img,svg{display:block;vertical-align:middle}
         img{max-width:100%;height:auto}
+        summary::-webkit-details-marker{display:none}
+        .cursor-pointer{cursor:pointer}.list-none{list-style-type:none}.pt-0{padding-top:0}.pl-5{padding-left:1.25rem}
+        details[open] .group-open\:rotate-180{transform:rotate(180deg)}.transition{transition:transform .15s ease}
         table{border-collapse:collapse;width:100%}
         
         /* Layout & Positioning */
@@ -485,23 +488,44 @@
             <!-- FAQ SECTION (LOCAL SEO + AI SEARCH) -->
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions about playing padel in Valencia</h2>
             <div class="space-y-4">
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold text-gray-900 text-lg mb-2">Which indoor padel clubs in Valencia handle summer heat best?</h3>
-                    <p class="text-base text-gray-600">Poorly ventilated or tented courts can easily exceed 40°C in Valencia. The best venues against summer heat are high-ceiling facilities with strong natural cross-breezes like <strong>Elite 22 (in Paterna)</strong>, or enclosed clubs featuring <strong>evaporative cooling systems</strong> like <strong>Family Sport Center (Beniparrell)</strong> and the new <strong>X7 Padel (Torrent)</strong>.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold text-gray-900 text-lg mb-2">Where to play covered padel in Valencia during rain or night humidity?</h3>
-                    <p class="text-base text-gray-600">During torrential rain or damp nights, book a <strong>Real Indoor</strong> enclosed warehouse (such as Elite 22 in Paterna, Family in Beniparrell, or X7 Padel in Torrent) over canvas-tented courts, where condensation frequently leaves the glass slippery.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold text-gray-900 text-lg mb-2">How much does it cost to rent an indoor padel court in Valencia?</h3>
-                    <p class="text-base text-gray-600 mb-3">In the Valencia metropolitan area, court hire for a full 90-minute session (4 players) typically falls within:</p>
-                    <ul class="text-sm text-gray-700 space-y-1 list-disc pl-5 mb-3">
-                        <li><strong>Off-Peak (mornings and early afternoons):</strong> €20 – €27 per court.</li>
-                        <li><strong>Peak Hours (evenings 18:00 to 22:00 and weekends):</strong> €26 – €38 per court.</li>
-                    </ul>
-                    <p class="text-sm text-gray-600">To train consistently without hunting for peak-hour courts each week, see our guide on <a href="how-much-padel-lessons-cost-valencia-prices.html" class="text-padel-600 font-bold underline hover:text-padel-900">how much padel lessons cost in Valencia with indoor court hire included</a>.</p>
-                </div>
+                <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-gray-900">
+                        <span>Which indoor padel clubs in Valencia handle summer heat best?</span>
+                        <span class="transition group-open:rotate-180 text-padel-600 shrink-0">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-200 mt-2">
+                        Poorly ventilated or tented courts can easily exceed 40°C in Valencia. The best venues against summer heat are high-ceiling facilities with strong natural cross-breezes like <strong>Elite 22 (in Paterna)</strong>, or enclosed clubs featuring <strong>evaporative cooling systems</strong> like <strong>Family Sport Center (Beniparrell)</strong> and the new <strong>X7 Padel (Torrent)</strong>.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-gray-900">
+                        <span>Where to play covered padel in Valencia during rain or night humidity?</span>
+                        <span class="transition group-open:rotate-180 text-padel-600 shrink-0">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-200 mt-2">
+                        During torrential rain or damp nights, book a <strong>Real Indoor</strong> enclosed warehouse (such as Elite 22 in Paterna, Family in Beniparrell, or X7 Padel in Torrent) over canvas-tented courts, where condensation frequently leaves the glass slippery.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-gray-900">
+                        <span>How much does it cost to rent an indoor padel court in Valencia?</span>
+                        <span class="transition group-open:rotate-180 text-padel-600 shrink-0">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-200 mt-2">
+                        <p class="mb-3">In the Valencia metropolitan area, court hire for a full 90-minute session (4 players) typically falls within:</p>
+                        <ul class="text-sm text-gray-700 space-y-1 list-disc pl-5 mb-3">
+                            <li><strong>Off-Peak (mornings and early afternoons):</strong> €20 – €27 per court.</li>
+                            <li><strong>Peak Hours (evenings 18:00 to 22:00 and weekends):</strong> €26 – €38 per court.</li>
+                        </ul>
+                        <p class="text-sm text-gray-600">To train consistently without hunting for peak-hour courts each week, see our guide on <a href="how-much-padel-lessons-cost-valencia-prices.html" class="text-padel-600 font-bold underline hover:text-padel-900">how much padel lessons cost in Valencia with indoor court hire included</a>.</p>
+                    </div>
+                </details>
             </div>
 
             <p class="mt-8">I hope this honest coach review helps you find your ideal court in Valencia. No single club is perfect for every situation, but matching the venue's features to the season ensures you always get the best match. See you on court!</p>
@@ -549,7 +573,7 @@
                 
                 <div class="mt-5 pt-5 border-t border-gray-800">
                     <p class="text-xs leading-relaxed text-gray-400">
-                        Lessons held at <strong>Elite 22 (Paterna)</strong>. Easily accessible club with free parking, less than 10 minutes away for players from <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella, and Valencia city</strong>.
+                        Lessons held at <strong>Elite 22 (Paterna)</strong>. Easily accessible club with free parking, less than 10 minutes away for players from <strong>Valencia city, Paterna, La Eliana, San Antonio de Benagéber, Bétera, Mas Camarena, Burjassot, Godella, and Rocafort</strong>.
                     </p>
                 </div>
             </div>

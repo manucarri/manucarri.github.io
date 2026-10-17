@@ -142,6 +142,9 @@
         a{color:inherit;text-decoration:inherit}
         img,svg{display:block;vertical-align:middle}
         img{max-width:100%;height:auto}
+        summary::-webkit-details-marker{display:none}
+        .cursor-pointer{cursor:pointer}.list-none{list-style-type:none}.pt-0{padding-top:0}.pl-5{padding-left:1.25rem}
+        details[open] .group-open\:rotate-180{transform:rotate(180deg)}.transition{transition:transform .15s ease}
         table{border-collapse:collapse;width:100%}
         
         /* Layout y Posicionamiento */
@@ -485,23 +488,44 @@
             <!-- SECCIÓN DE PREGUNTAS FRECUENTES (SEO LOCAL + IA) -->
             <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Preguntas frecuentes sobre dónde jugar al pádel en Valencia</h2>
             <div class="space-y-4">
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold text-gray-900 text-lg mb-2">¿Qué clubes de pádel indoor en Valencia se llevan mejor con el calor en verano?</h3>
-                    <p class="text-base text-gray-600">En verano en Valencia se pueden superar los 40 ºC dentro de pistas mal ventiladas o cubiertas con lona. Las mejores opciones contra el calor son naves altas con fuerte ventilación cruzada como <strong>Elite 22 (en Paterna)</strong>, o clubes en nave cerrada que cuentan con sistemas de <strong>climatización evaporativa</strong> como <strong>Family Sport Center (Beniparrell)</strong> y el nuevo <strong>X7 Pádel (Torrent)</strong>.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold text-gray-900 text-lg mb-2">¿Dónde jugar al pádel cubierto (pàdel cobert) en Valencia cuando llueve o hay humedad?</h3>
-                    <p class="text-base text-gray-600">Cuando llueve con fuerza o hay humedad nocturna, conviene reservar en un club de <strong>Indoor Real</strong> en nave cerrada (como Elite 22 en Paterna, Family en Beniparrell o X7 Pádel en Torrent) frente a las pistas con carpa de lona, donde la condensación suele empañar el cristal y hacer que la pelota resbale de forma impredecible.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold text-gray-900 text-lg mb-2">¿Cuánto cuesta alquilar una pista indoor suelta en Valencia?</h3>
-                    <p class="text-base text-gray-600 mb-3">En el área metropolitana de Valencia, el precio medio por pista completa (4 jugadores) se sitúa en los siguientes rangos:</p>
-                    <ul class="text-sm text-gray-700 space-y-1 list-disc pl-5 mb-3">
-                        <li><strong>Horario Valle (mañanas y mediodías):</strong> 20 € – 27 € por sesión de 90 minutos.</li>
-                        <li><strong>Horario Pico (tardes de 18:00 a 22:00 y fines de semana):</strong> 26 € – 38 € por sesión de 90 minutos.</li>
-                    </ul>
-                    <p class="text-sm text-gray-600">Si buscas entrenar cada semana sin preocuparte de buscar pistas libres en horas punta, consulta nuestro desglose sobre <a href="cuanto-cuestan-clases-padel-valencia-precios.html" class="text-padel-600 font-bold underline hover:text-padel-900">cuánto cuestan las clases de pádel en Valencia y las cuotas con pista incluida</a>.</p>
-                </div>
+                <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-gray-900">
+                        <span>¿Qué clubes de pádel indoor en Valencia se llevan mejor con el calor en verano?</span>
+                        <span class="transition group-open:rotate-180 text-padel-600 shrink-0">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-200 mt-2">
+                        En verano en Valencia se pueden superar los 40 ºC dentro de pistas mal ventiladas o cubiertas con lona. Las mejores opciones contra el calor son naves altas con fuerte ventilación cruzada como <strong>Elite 22 (en Paterna)</strong>, o clubes en nave cerrada que cuentan con sistemas de <strong>climatización evaporativa</strong> como <strong>Family Sport Center (Beniparrell)</strong> y el nuevo <strong>X7 Pádel (Torrent)</strong>.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-gray-900">
+                        <span>¿Dónde jugar al pádel cubierto (pàdel cobert) en Valencia cuando llueve o hay humedad?</span>
+                        <span class="transition group-open:rotate-180 text-padel-600 shrink-0">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-200 mt-2">
+                        Cuando llueve con fuerza o hay humedad nocturna, conviene reservar en un club de <strong>Indoor Real</strong> en nave cerrada (como Elite 22 en Paterna, Family en Beniparrell o X7 Pádel en Torrent) frente a las pistas con carpa de lona, donde la condensación suele empañar el cristal y hacer que la pelota resbale de forma impredecible.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-gray-900">
+                        <span>¿Cuánto cuesta alquilar una pista indoor suelta en Valencia?</span>
+                        <span class="transition group-open:rotate-180 text-padel-600 shrink-0">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-200 mt-2">
+                        <p class="mb-3">En el área metropolitana de Valencia, el precio medio por pista completa (4 jugadores) se sitúa en los siguientes rangos:</p>
+                        <ul class="text-sm text-gray-700 space-y-1 list-disc pl-5 mb-3">
+                            <li><strong>Horario Valle (mañanas y mediodías):</strong> 20 € – 27 € por sesión de 90 minutos.</li>
+                            <li><strong>Horario Pico (tardes de 18:00 a 22:00 y fines de semana):</strong> 26 € – 38 € por sesión de 90 minutos.</li>
+                        </ul>
+                        <p class="text-sm text-gray-600">Si buscas entrenar cada semana sin preocuparte de buscar pistas libres en horas punta, consulta nuestro desglose sobre <a href="cuanto-cuestan-clases-padel-valencia-precios.html" class="text-padel-600 font-bold underline hover:text-padel-900">cuánto cuestan las clases de pádel en Valencia y las cuotas con pista incluida</a>.</p>
+                    </div>
+                </details>
             </div>
 
             <p class="mt-8">Espero que esta guía sincera te sirva para elegir dónde reservar tu próximo partido. No existe el club "perfecto" que lo tenga absolutamente todo, pero conociendo los pros y contras de cada instalación sabrás exactamente dónde ir según la época del año. ¡Nos vemos en la pista!</p>
@@ -549,7 +573,7 @@
                 
                 <div class="mt-5 pt-5 border-t border-gray-800">
                     <p class="text-xs leading-relaxed text-gray-400">
-                        Clases impartidas en las instalaciones de <strong>Elite 22 (Paterna)</strong>. Club de fácil acceso y parking gratuito, a menos de 10 minutos para jugadores de <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella y Valencia capital</strong>.
+                        Clases impartidas en las instalaciones de <strong>Elite 22 (Paterna)</strong>. Club de fácil acceso y parking gratuito, a menos de 10 minutos para jugadores de <strong>Valencia capital, Paterna, La Eliana, San Antonio de Benagéber, Bétera, Mas Camarena, Burjassot, Godella y Rocafort</strong>.
                     </p>
                 </div>
             </div>

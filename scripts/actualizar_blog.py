@@ -82,7 +82,7 @@ def build_blog_card(post):
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">{post['description']}</p>
                     <a href="{post['filename']}" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        {read_more} <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        {read_more} <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>"""

@@ -42,7 +42,7 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index-en.html" class="flex items-center gap-2">
-                <i data-lucide="tennis" class="h-8 w-8 text-padel-600"></i>
+                <svg class="h-8 w-8 text-padel-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5c2.5-2.5 6.5-2.5 9 0"/><path d="M6.5 15.5c2.5 2.5 6.5 2.5 9 0"/></svg>
                 <span class="font-black text-2xl tracking-tight text-gray-900">Manu<span class="text-padel-600">Carrilero</span></span>
             </a>
             
@@ -56,14 +56,14 @@
 
             <div class="flex items-center gap-4">
                 <a href="blog.html" class="hidden md:flex items-center gap-2 text-gray-500 hover:text-padel-600 font-bold transition-colors border-r border-gray-200 pr-4">
-                    <span class="text-xl">🇪🇸</span> Versión en Español
+                    <span class="text-xl" aria-hidden="true">🇪🇸</span> Versión en Español
                 </a>
                 <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'header_escritorio_blog_index_en'});" target="_blank" class="hidden sm:flex bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition-colors shadow-md items-center gap-2">
-                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp
                 </a>
                 
-                <button id="btn-menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
-                    <i data-lucide="menu" class="h-7 w-7"></i>
+                <button id="btn-menu" aria-label="Open menu" class="md:hidden text-gray-900 hover:text-padel-600 focus:outline-none p-2">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                 </button>
             </div>
         </div>
@@ -71,7 +71,7 @@
         <div id="menu-movil" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
             <div class="px-4 pt-2 pb-6 flex flex-col space-y-2">
                 <a href="blog.html" class="block px-4 py-3 text-base font-bold text-gray-700 bg-gray-50 hover:text-padel-600 rounded-xl flex items-center gap-2">
-                    <span class="text-xl">🇪🇸</span> Versión en Español
+                    <span class="text-xl" aria-hidden="true">🇪🇸</span> Versión en Español
                 </a>
                 <a href="index-en.html#pricing" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Pricing</a>
                 <a href="about-me.html" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">About Me</a>
@@ -79,7 +79,7 @@
                 <a href="index-en.html#reviews" class="link-movil block px-4 py-3 text-base font-bold text-gray-700 hover:bg-padel-50 hover:text-padel-600 rounded-xl">Reviews</a>
                 <a href="blog-en.html" class="block px-4 py-3 text-base font-black text-padel-600 bg-padel-50 rounded-xl">Go to Blog</a>
                 <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'menu_movil_blog_index_en'});" class="block px-4 py-3 mt-4 text-base font-bold text-white bg-green-500 rounded-xl text-center flex justify-center gap-2">
-                    <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp
                 </a>
             </div>
         </div>
@@ -96,7 +96,7 @@
             <!-- AUTO-POST: how-much-padel-lessons-cost-valencia-prices.html -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="precios-clases-padel-valencia.avif" alt="Realistic price comparison and coaching fees for padel lessons in Valencia with indoor court included" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="precios-clases-padel-valencia.avif" alt="Realistic price comparison and coaching fees for padel lessons in Valencia with indoor court included" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fetchpriority="high">
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pricing, Formats & Methodology</div>
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
@@ -105,7 +105,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Discover real padel lesson prices in Valencia: hourly vs monthly comparisons, hidden court fees, and indoor coaching packages in Paterna with Manu Carrilero.</p>
                     <a href="how-much-padel-lessons-cost-valencia-prices.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -122,7 +122,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Discover how recording yourself playing padel speeds up motor learning and biomechanics. Camera positioning tips, gear mounts, and slow-motion video feedback.</p>
                     <a href="video-analysis-recording-yourself-padel.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -139,7 +139,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Discover how racket balance and late impact cause epicondylitis, and how to combine technique and strength to play pain-free.</p>
                     <a href="padel-elbow-injury-biomechanics.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -147,7 +147,7 @@
             <!-- ARTÍCULO NUEVO: THE BEST PADEL CLUBS -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="mejores-clubs-padel-valencia.avif" alt="View of padel courts at the best padel clubs in Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="mejores-clubs-padel-valencia.avif" alt="View of padel courts at the best padel clubs in Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Local Guide</div>
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
@@ -156,7 +156,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">My honest opinion on where to play padel in Valencia: Elite 22, Family, Calderona, and Sport City.</p>
                     <a href="best-padel-clubs-valencia.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read full guide <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read full guide <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -164,9 +164,9 @@
             <!-- ARTÍCULO 5: NUEVA GUÍA INICIACIÓN -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative bg-black">
-                    <img src="aprender-padel-valencia.avif" alt="Beginner padel lessons in Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                    <img src="aprender-padel-valencia.avif" alt="Beginner padel lessons in Valencia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" loading="lazy">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <i data-lucide="play-circle" class="h-16 w-16 text-white opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        <svg class="h-16 w-16 text-white opacity-80 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                     </div>
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Beginner's Guide</div>
                 </div>
@@ -176,7 +176,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Everything you need to know before your first match: grip, walls, ball protocol, and scoring.</p>
                     <a href="padel-beginners-guide.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        View Guide & Video <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        View Guide & Video <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -184,7 +184,7 @@
             <!-- ARTÍCULO 4: TÉCNICA Y ESTANCAMIENTO -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="profesor-padel-valencia.avif" alt="Manu Carrilero teaching smash preparation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="profesor-padel-valencia.avif" alt="Manu Carrilero teaching smash preparation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Biomechanics</div>
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
@@ -193,7 +193,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Discover the historical mistake in padel teaching that limits your power and causes injuries.</p>
                     <a href="traditional-technique-padel-stagnation.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -201,7 +201,7 @@
             <!-- ARTÍCULO 3: EMPUÑADURA -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="monitor-padel-valencia.avif" alt="Manu Carrilero correcting padel grip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="monitor-padel-valencia.avif" alt="Manu Carrilero correcting padel grip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Biomechanics</div>
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
@@ -210,7 +210,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Discover why the continental grip is non-negotiable and how a bad grip causes stagnation.</p>
                     <a href="padel-continental-grip-mistakes.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -218,7 +218,7 @@
             <!-- ARTÍCULO 2: CONTRAPARED -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="aprender-padel-valencia.avif" alt="Side wall exit padel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="aprender-padel-valencia.avif" alt="Side wall exit padel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Technique</div>
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
@@ -227,7 +227,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">The contra-pared is one of the most overused shots in amateur padel. Discover why I forbid it.</p>
                     <a href="why-i-never-teach-the-boast-padel.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -235,7 +235,7 @@
             <!-- ARTÍCULO 1: FORMATOS DE CLASE -->
             <article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="grupos-padel-valencia.avif" alt="Group padel lessons" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="grupos-padel-valencia.avif" alt="Group padel lessons" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute top-4 left-4 bg-white text-padel-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Methodology</div>
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
@@ -244,7 +244,7 @@
                     </h2>
                     <p class="text-gray-600 mb-6 flex-grow text-sm">Discover whether training in groups, in pairs, or individually is the best way to improve.</p>
                     <a href="padel-classes-valencia-group-vs-individual.html" class="text-padel-600 font-bold flex items-center gap-2 hover:text-padel-900 transition-colors text-sm">
-                        Read article <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        Read article <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </article>
@@ -252,29 +252,25 @@
         </div>
     </main>
 
-    <footer class="bg-gray-950 text-gray-400 py-12 border-t-8 border-padel-accent mt-auto">
+    <footer class="bg-gray-950 text-gray-300 py-12 border-t-8 border-padel-accent mt-auto w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-            
-            <!-- Columna 1: Info y Redes -->
             <div>
                 <span class="text-white font-bold text-2xl tracking-tight mb-1 block">ManuCarrilero</span>
                 <div class="flex gap-4 flex-wrap mt-4">
                     <a href="https://www.instagram.com/manucarrilero/" target="_blank" class="text-padel-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-bold">
-                        <i data-lucide="instagram" class="h-5 w-5"></i> Instagram
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> Instagram
                     </a>
-                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
-                        <i data-lucide="linkedin" class="h-5 w-5"></i> LinkedIn
+                    <a href="https://www.linkedin.com/in/manu-carrilero" target="_blank" class="text-gray-300 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
                     </a>
                 </div>
-                <p class="text-sm mb-6 mt-4 text-gray-400">Taking your padel level to the next step. Technical, tactical, and dynamic classes.</p>
+                <p class="text-sm mb-6 mt-4 text-gray-300">Taking your padel level to the next step. Technical, tactical, and dynamic classes.</p>
             </div>
-            
-            <!-- Columna 2: Ubicación + SEO LOCAL -->
             <div>
-                <h4 class="text-white font-bold mb-4 text-lg">Training Location</h4>
+                <h2 class="text-white font-bold mb-4 text-lg">Training Location</h2>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-start gap-3">
-                        <i data-lucide="map-pin" class="h-5 w-5 text-padel-500 shrink-0 mt-1"></i> 
+                        <svg class="h-5 w-5 text-padel-500 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                         <span>
                             <a href="https://maps.app.goo.gl/B7JnheBAYC8gvMq59" target="_blank" class="hover:text-white transition-colors">
                                 <strong>Elite 22 Paterna</strong><br>Valencia, Spain<br>
@@ -283,41 +279,36 @@
                         </span>
                     </li>
                 </ul>
-                
-                <!-- NUEVO BLOQUE SEO LOCAL -->
                 <div class="mt-5 pt-5 border-t border-gray-800">
-                    <p class="text-xs leading-relaxed text-gray-500">
-                        Lessons held at <strong>Elite 22 (Paterna)</strong>. Easily accessible club with free parking, less than 10 minutes away for players from <strong>La Eliana, San Antonio de Benagéber, Bétera, Burjassot, Godella, and Valencia city</strong>.
+                    <p class="text-xs leading-relaxed text-gray-400">
+                        Lessons held at <strong>Elite 22 (Paterna)</strong>. Easily accessible club with free parking, less than 10 minutes away for players from <strong>Valencia city, Paterna, La Eliana, San Antonio de Benagéber, Bétera, Mas Camarena, Burjassot, Godella, and Rocafort</strong>.
                     </p>
                 </div>
-                <!-- FIN DEL BLOQUE SEO LOCAL -->
             </div>
-            
-            <!-- Columna 3: Contacto -->
             <div>
-                <h4 class="text-white font-bold mb-4 text-lg">Direct Contact</h4>
+                <h2 class="text-white font-bold mb-4 text-lg">Direct Contact</h2>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-center gap-3">
-                        <i data-lucide="phone" class="h-5 w-5 text-padel-500"></i> +34 622 04 19 11
+                        <svg class="h-5 w-5 text-padel-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +34 622 04 19 11
                     </li>
                     <li>
                         <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I%20would%20like%20more%20information%20about%20your%20padel%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'footer_blog_index_en'});" class="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-colors mt-2">
-                            <i data-lucide="message-circle" class="h-4 w-4"></i> Message me on WhatsApp
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Message me on WhatsApp
                         </a>
                     </li>
                 </ul>
             </div>
-            
         </div>
     </footer>
+
+    <a href="https://wa.me/34622041911?text=Hi%20Manu,%20I'm%20reading%20your%20padel%20blog%20and%20would%20like%20to%20check%20availability%20for%20lessons" onclick="gtag('event', 'clic_whatsapp', {'origen': 'boton_flotante_blog_index_en'});" target="_blank" aria-label="Contact via WhatsApp" class="fixed bottom-5 right-5 z-50 bg-green-600 hover:bg-green-500 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 font-bold transition-all hover:scale-105 border-2 border-white">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        <span class="text-sm sm:text-base">Let's Train?</span>
+    </a>
 
     <!-- Script optimizado y diferido -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-            
             const btnMenu = document.getElementById('btn-menu');
             const menuMovil = document.getElementById('menu-movil');
             const linksMovil = document.querySelectorAll('.link-movil');
