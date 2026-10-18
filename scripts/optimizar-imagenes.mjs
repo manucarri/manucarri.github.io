@@ -1,21 +1,34 @@
 #!/usr/bin/env node
 /**
  * Optimizador de imagenes para clasespadelvalencia.com
- * Convierte JPG/PNG/WebP a .avif (formato unico del sitio), redimensiona y reporta el peso.
+ * Convierte JPG/PNG/WebP a .avif (formato unico del sitio): recorta, redimensiona,
+ * comprime hasta el peso objetivo y reporta las dimensiones finales para el <img>.
  *
  * Uso:
  *   npm run optimizar:imagenes                       -> procesa todo img-originales/
  *   npm run optimizar:imagenes -- foto.jpg           -> procesa un archivo concreto
- *   npm run optimizar:imagenes -- --width 800 foto.jpg
+ *   npm run optimizar:imagenes -- --use hero foto.jpg
+ *   npm run optimizar:imagenes -- --ratio 16:9 --focus left foto.jpg
+ *
+ * Presets (--use):
+ *   hero   -> 1600px, 16:9   (imagen LCP del articulo)
+ *   card   ->  800px, 5:3    (tarjetas del blog/home)
+ *   thumb  ->  160px, 1:1    (avatares / miniaturas)
  *
  * Opciones:
- *   --width <px>       Ancho maximo (por defecto 1600). Nunca amplia si la fuente es mas pequena.
- *   --quality <1-100>  Calidad AVIF (por defecto 55).
- *   --effort <0-9>     Esfuerzo de compresion AVIF, mas alto = mas lento y mas pequeno (por defecto 4).
- *   --out <dir>        Carpeta destino (por defecto la raiz del repo).
- *   --suffix <txt>     Sufijo de nombre para retina, p. ej. "-2x" (por defecto vacio).
- *   --max-kb <n>       Avisa si el .avif resultante supera este peso (por defecto 150).
- *   --bg <color>       Color de fondo si la fuente tiene transparencia (por defecto "#ffffff").
+ *   --width <px>        Ancho maximo (por defecto 1600). Nunca amplia.
+ *   --ratio <W:H>       Recorta a esta proporcion, p. ej. 16:9 o 1:1 (fit cover).
+ *   --focus <pos>       Punto focal del recorte: center|top|bottom|left|right|
+ *                       top-left|top-right|bottom-left|bottom-right|attention.
+ *                       "attention" deja que sharp detecte la zona mas relevante.
+ *   --crop <x,y,w,h>    Recorte explicito en pixeles (tiene prioridad sobre --ratio).
+ *   --quality <1-100>   Calidad AVIF de partida (por defecto 55).
+ *   --effort <0-9>      Esfuerzo de compresion AVIF (por defecto 4; mas alto = mas lento y mas pequeno).
+ *   --max-kb <n>        Peso maximo objetivo en KB (por defecto 150). Baja la calidad
+ *                       automaticamente hasta cumplirlo (suelo de calidad: 25).
+ *   --out <dir>         Carpeta destino (por defecto la raiz del repo).
+ *   --suffix <txt>      Sufijo de nombre para retina, p. ej. "-2x".
+ *   --bg <color>        Color de fondo si la fuente tiene transparencia (por defecto "#ffffff").
  *   --help
  *
  * Los originales se leen de img-originales/ (ignorado por git). La salida va a la raiz
@@ -29,34 +42,75 @@ import sharp from "sharp";
 const ROOT = process.cwd();
 const SRC_DIR = path.join(ROOT, "img-originales");
 const SOURCE_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".avif"]);
+const QUALITY_FLOOR = 25;
+
+const PRESETS = {
+  hero: { width: 1600, ratio: [16, 9], quality: 55 },
+  card: { width: 800, ratio: [5, 3], quality: 52 },
+  thumb: { width: 160, ratio: [1, 1], quality: 60 },
+};
+
+const FOCUS_MAP = {
+  center: "center",
+  centre: "center",
+  top: "north",
+  north: "north",
+  bottom: "south",
+  south: "south",
+  left: "west",
+  west: "west",
+  right: "east",
+  east: "east",
+  "top-left": "northwest",
+  "top-right": "northeast",
+  "bottom-left": "southwest",
+  "bottom-right": "southeast",
+  attention: sharp.strategy.attention,
+};
 
 function parseArgs(argv) {
   const opts = {
     width: 1600,
+    ratio: null,
+    focus: null,
+    crop: null,
     quality: 55,
     effort: 4,
+    maxKb: 150,
     out: ROOT,
     suffix: "",
-    maxKb: 150,
     bg: "#ffffff",
     files: [],
+    explicit: new Set(),
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     const next = () => argv[++i];
     switch (a) {
-      case "--width": opts.width = Number(next()); break;
-      case "--quality": opts.quality = Number(next()); break;
+      case "--width": opts.width = Number(next()); opts.explicit.add("width"); break;
+      case "--ratio": opts.ratio = parseRatio(next()); opts.explicit.add("ratio"); break;
+      case "--focus": opts.focus = parseFocus(next()); opts.explicit.add("focus"); break;
+      case "--crop": opts.crop = parseCrop(next()); opts.explicit.add("crop"); break;
+      case "--quality": opts.quality = Number(next()); opts.explicit.add("quality"); break;
       case "--effort": opts.effort = Number(next()); break;
+      case "--max-kb": opts.maxKb = Number(next()); break;
       case "--out": opts.out = path.resolve(ROOT, next()); break;
       case "--suffix": opts.suffix = next(); break;
-      case "--max-kb": opts.maxKb = Number(next()); break;
       case "--bg": opts.bg = next(); break;
+      case "--use": {
+        const preset = PRESETS[next()];
+        if (!preset) throw new Error(`Preset desconocido. Usa: ${Object.keys(PRESETS).join(", ")}`);
+        for (const [k, v] of Object.entries(preset)) {
+          if (!opts.explicit.has(k)) opts[k] = v;
+        }
+        break;
+      }
       case "--help":
       case "-h":
         console.log(
-          "Uso: node scripts/optimizar-imagenes.mjs [archivos...] " +
-          "[--width 1600] [--quality 55] [--effort 4] [--out <dir>] [--suffix -2x] [--max-kb 150] [--bg #fff]"
+          "Uso: node scripts/optimizar-imagenes.mjs [archivos...] [--use hero|card|thumb] " +
+            "[--width 1600] [--ratio 16:9] [--focus attention] [--crop x,y,w,h] [--quality 55] " +
+            "[--effort 4] [--max-kb 150] [--out <dir>] [--suffix -2x] [--bg #fff]"
         );
         process.exit(0);
         break;
@@ -66,6 +120,29 @@ function parseArgs(argv) {
     }
   }
   return opts;
+}
+
+function parseRatio(value) {
+  const m = /^(\d+)[:x](\d+)$/.exec(String(value));
+  if (!m) throw new Error(`Proporcion invalida: ${value} (usa formato W:H, p. ej. 16:9)`);
+  return [Number(m[1]), Number(m[2])];
+}
+
+function parseFocus(value) {
+  const key = String(value).toLowerCase();
+  if (!(key in FOCUS_MAP)) {
+    throw new Error(`Punto focal invalido: ${value} (opciones: ${Object.keys(FOCUS_MAP).join(", ")})`);
+  }
+  return FOCUS_MAP[key];
+}
+
+function parseCrop(value) {
+  const parts = String(value).split(",").map((n) => Number(n.trim()));
+  if (parts.length !== 4 || parts.some((n) => !Number.isFinite(n) || n < 0)) {
+    throw new Error(`Recorte invalido: ${value} (usa x,y,w,h en pixeles)`);
+  }
+  const [left, top, width, height] = parts;
+  return { left, top, width, height };
 }
 
 /** Convierte un nombre de archivo en slug kebab-case sin acentos ni mayusculas. */
@@ -91,9 +168,7 @@ async function collectInputs(opts) {
     const files = entries
       .filter((e) => e.isFile() && SOURCE_EXTS.has(path.extname(e.name).toLowerCase()))
       .map((e) => path.join(SRC_DIR, e.name));
-    if (files.length === 0) {
-      throw new Error("La carpeta img-originales/ esta vacia.");
-    }
+    if (files.length === 0) throw new Error("La carpeta img-originales/ esta vacia.");
     return files;
   } catch (err) {
     if (err.code === "ENOENT") {
@@ -106,6 +181,32 @@ async function collectInputs(opts) {
   }
 }
 
+/** Construye el pipeline de recorte + resize y devuelve el buffer AVIF a esa calidad. */
+async function render(file, opts, quality) {
+  let img = sharp(file, { failOn: "none" }).rotate();
+
+  if (opts.crop) {
+    img = img.extract(opts.crop);
+  } else if (opts.ratio) {
+    const [rw, rh] = opts.ratio;
+    const height = Math.round((opts.width * rh) / rw);
+    img = img.resize({
+      width: opts.width,
+      height,
+      fit: "cover",
+      position: opts.focus || "center",
+      withoutEnlargement: true,
+    });
+  } else {
+    img = img.resize({ width: opts.width, withoutEnlargement: true });
+  }
+
+  return img
+    .flatten({ background: opts.bg })
+    .avif({ quality, effort: opts.effort })
+    .toBuffer();
+}
+
 async function optimize(file, opts) {
   const ext = path.extname(file).toLowerCase();
   if (!SOURCE_EXTS.has(ext)) return null;
@@ -113,37 +214,32 @@ async function optimize(file, opts) {
   const base = slugify(path.basename(file, ext));
   const outName = `${base}${opts.suffix}.avif`;
   const outPath = path.join(opts.out, outName);
+  const srcMeta = await sharp(file, { failOn: "none" }).metadata();
+  const srcKb = (await stat(file)).size / 1024;
 
-  const input = sharp(file, { failOn: "none" });
-  const meta = await input.metadata();
-
-  // Redimensiona solo si la fuente es mas ancha que el objetivo (nunca amplia).
-  const pipeline = [];
-  if (meta.width && meta.width > opts.width) {
-    pipeline.push(sharp(file).resize({ width: opts.width, withoutEnlargement: true }));
-  } else {
-    pipeline.push(sharp(file));
+  // Primer intento con la calidad pedida; si supera --max-kb, baja la calidad por pasos.
+  let quality = opts.quality;
+  let buffer = await render(file, opts, quality);
+  while (opts.maxKb > 0 && buffer.length / 1024 > opts.maxKb && quality > QUALITY_FLOOR) {
+    quality = Math.max(QUALITY_FLOOR, quality - 5);
+    buffer = await render(file, opts, quality);
   }
-
-  const buffer = await pipeline[0]
-    .flatten({ background: opts.bg }) // evita bordes negros si hay transparencia
-    .avif({ quality: opts.quality, effort: opts.effort })
-    .toBuffer();
 
   await writeFile(outPath, buffer);
 
+  const outMeta = await sharp(buffer).metadata();
   const rel = path.relative(ROOT, outPath).replace(/\\/g, "/");
-  const srcKb = (await stat(file)).size / 1024;
   const outKb = buffer.length / 1024;
   const saved = srcKb > 0 ? Math.round((1 - outKb / srcKb) * 100) : 0;
-  const warn = outKb > opts.maxKb ? "  <-- SUPERA EL OBJETIVO, baja --quality" : "";
+  const over = opts.maxKb > 0 && outKb > opts.maxKb;
+  const warn = over ? "  <-- SIGUE POR ENCIMA DEL OBJETIVO (sube --effort o recorta mas)" : "";
 
   console.log(
-    `${rel}  ${meta.width ? meta.width + "px -> " : ""}${opts.width}px  ` +
-      `${human(srcKb * 1024)} -> ${human(outKb * 1024)} (-${saved}%)${warn}`
+    `${rel}  ${srcMeta.width}x${srcMeta.height} -> ${outMeta.width}x${outMeta.height}px  ` +
+      `q${quality}  ${human(srcKb * 1024)} -> ${human(outKb * 1024)} (-${saved}%)${warn}`
   );
 
-  return { outName, outPath, width: opts.width, height: Math.round((opts.width * (meta.height || 1)) / (meta.width || 1)) };
+  return { outName, width: outMeta.width, height: outMeta.height };
 }
 
 async function main() {
@@ -151,7 +247,15 @@ async function main() {
   await mkdir(opts.out, { recursive: true });
   const files = await collectInputs(opts);
 
-  console.log(`Optimizando ${files.length} imagen(es) a AVIF (ancho ${opts.width}px, calidad ${opts.quality})...\n`);
+  const recipe = opts.crop
+    ? `crop ${opts.crop.left},${opts.crop.top},${opts.crop.width},${opts.crop.height}`
+    : opts.ratio
+      ? `${opts.ratio[0]}:${opts.ratio[1]}${opts.focus ? ` focus=${opts.focus === sharp.strategy.attention ? "attention" : opts.focus}` : ""}`
+      : "sin recorte";
+  console.log(
+    `Optimizando ${files.length} imagen(es) a AVIF (ancho ${opts.width}px, ${recipe}, calidad ${opts.quality}, max ${opts.maxKb} KB)...\n`
+  );
+
   const results = [];
   for (const f of files) {
     try {
@@ -164,7 +268,11 @@ async function main() {
   }
 
   console.log(`\nListo: ${results.length} archivo(s) .avif generados en ${path.relative(ROOT, opts.out) || "."}/`);
-  console.log("Siguiente paso: insertar la etiqueta <img> con width/height/alt y actualizar og:image si es la portada.");
+  if (results.length) {
+    console.log("Dimensiones para el <img> (atributos width/height):");
+    for (const r of results) console.log(`  ${r.outName}  ->  width="${r.width}" height="${r.height}"`);
+  }
+  console.log("Recuerda: alt localizado, loading=\"lazy\" decoding=\"async\" (o preload+fetchpriority=\"high\" si es el hero) y og:image si es la portada.");
 }
 
 main().catch((err) => {

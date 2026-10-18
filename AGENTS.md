@@ -79,6 +79,9 @@ Source documents for these roles: `docs/agentes/01-arquitectura-y-mantenimiento.
 - The site uses **`.avif` only**. Never reference `.jpg`/`.png`/`.webp` from pages.
 - Optimize with **sharp**: put originals in `img-originales/` (gitignored), run `npm install` once,
   then `npm run optimizar:imagenes` (see skill `imagenes-avif` for flags and markup).
+- Presets `--use hero|card|thumb`; crop with `--ratio W:H`, `--focus attention`, or explicit
+  `--crop x,y,w,h`. `--max-kb` auto-lowers quality to hit the weight target. The script prints the
+  final `width`/`height` to use in the `<img>`.
 - **This agent cannot generate images** — the author supplies the photos.
 - Never commit `node_modules/` or `img-originales/`. Do commit `package.json` and `package-lock.json`.
 - Naming: descriptive kebab-case, lowercase, tied to the article slug (fix the legacy

@@ -24,18 +24,30 @@ Deja los originales en `img-originales/` (ignorada por git) y ejecuta:
 npm run optimizar:imagenes
 ```
 
-Opciones útiles:
+**Presets por uso** (recomendado, aplican ancho + proporción + calidad):
 
 ```bash
-npm run optimizar:imagenes -- --width 800 foto.jpg     # un archivo, ancho 800px
-npm run optimizar:imagenes -- --quality 45 --max-kb 100
-npm run optimizar:imagenes -- --suffix -2x             # variante retina
+npm run optimizar:imagenes -- --use hero foto.jpg     # 1600px, 16:9 (imagen LCP)
+npm run optimizar:imagenes -- --use card foto.jpg     #  800px, 5:3  (tarjetas)
+npm run optimizar:imagenes -- --use thumb foto.jpg    #  160px, 1:1  (avatares)
 ```
 
-- Ancho por defecto 1600 px (nunca amplía si la fuente es más pequeña).
-- Calidad AVIF por defecto 55. Objetivo de peso: ≤ 150 KB (avisa si lo supera).
-- Salida: la raíz del repo, que es donde el sitio referencia los `.avif`.
-- El nombre de salida se deriva del original en **kebab-case** y minúsculas.
+**Recorte y ajuste fino:**
+
+```bash
+npm run optimizar:imagenes -- --ratio 16:9 --focus left foto.jpg
+npm run optimizar:imagenes -- --focus attention foto.jpg        # auto-detección de la zona relevante
+npm run optimizar:imagenes -- --crop 200,80,1200,900 foto.jpg   # x,y,w,h explícitos
+npm run optimizar:imagenes -- --width 800 --quality 45 --max-kb 100 --suffix -2x foto.jpg
+```
+
+- Punto focal (`--focus`): `center|top|bottom|left|right|top-left|top-right|bottom-left|bottom-right|attention`.
+- `--max-kb` (por defecto 150) **baja la calidad automáticamente** (pasos de 5, suelo 25) hasta cumplir el peso; si aún así no cabe, avisa.
+- Ancho por defecto 1600 px (nunca amplía). Salida en la raíz del repo, nombre en kebab-case.
+- El script **imprime las dimensiones finales** para usarlas como `width`/`height` del `<img>`.
+
+Para el recorte "artístico", lo más fiable es indicar `--focus` (o usar `attention`); el agente no decide
+el mejor encuadre estético por sí solo.
 
 ## 3. Convención de nombres y tamaños
 
