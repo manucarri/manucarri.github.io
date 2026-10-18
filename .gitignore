@@ -1,0 +1,9 @@
+# Dependencias del tooling de desarrollo (optimizacion de imagenes)
+node_modules/
+
+# Imagenes originales sin optimizar: no se suben al repo, solo sirven de entrada
+img-originales/
+
+# Ruido del sistema
+.DS_Store
+Thumbs.db

@@ -65,10 +65,26 @@ matches instead of having them always in context:
 - **`negocio-leads`** — pricing, commercial copy, offers, and replying to client leads / price
   objections (official rates: group 3-5 = 69 €/mo, couple = 95 €/mo, individual = 165 €/mo,
   diagnostic = 40 €).
+- **`imagenes-avif`** — adding/replacing/optimizing images (JPG/PNG → `.avif` with sharp).
 - **`/nuevo-articulo <tema>`** — command that kicks off the bilingual blog workflow.
+- **`/optimizar-imagenes`** — command that runs the AVIF image pipeline.
 
 Source documents for these roles: `docs/agentes/01-arquitectura-y-mantenimiento.md`,
 `docs/agentes/02-redactor-blog-seo.md`, `docs/agentes/03-negocio-ventas-leads.md`.
+
+## Images (AVIF pipeline)
+
+- The site uses **`.avif` only**. Never reference `.jpg`/`.png`/`.webp` from pages.
+- Optimize with **sharp**: put originals in `img-originales/` (gitignored), run `npm install` once,
+  then `npm run optimizar:imagenes` (see skill `imagenes-avif` for flags and markup).
+- **This agent cannot generate images** — the author supplies the photos.
+- Never commit `node_modules/` or `img-originales/`. Do commit `package.json` and `package-lock.json`.
+- Naming: descriptive kebab-case, lowercase, tied to the article slug (fix the legacy
+  `Profesor-padel-titulado-valencia.avif` capitalization when touched).
+- Every `<img>` needs `width`/`height` and a localized `alt`. Secondary images use
+  `loading="lazy" decoding="async"`; the LCP hero uses
+  `<link rel="preload" as="image" href="..." fetchpriority="high">`.
+- Update `og:image` when the image is the article's social cover.
 
 ## Reference templates (already compliant — copy their patterns)
 

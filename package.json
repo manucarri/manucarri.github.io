@@ -1,0 +1,13 @@
+{
+  "name": "clasespadelvalencia-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio estatico clasespadelvalencia.com (GitHub Pages). Tooling de optimizacion de imagenes (JPG/PNG -> AVIF).",
+  "scripts": {
+    "optimizar:imagenes": "node scripts/optimizar-imagenes.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}
