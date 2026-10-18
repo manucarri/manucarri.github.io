@@ -16,8 +16,10 @@ No build step, no framework, no bundler.
 **Before any local work, sync first** to avoid `non-fast-forward` rejections:
 
 ```bash
-git pull --rebase origin main
+git pull --rebase --autostash origin main
 ```
+
+`--autostash` lets this work even if you already have uncommitted changes.
 
 ## Hard rules (never break these)
 
@@ -120,9 +122,9 @@ push as potentially conflicting and follow this protocol so nothing blocks.
 
 **Safe protocol when the user asks you to commit/push:**
 
-1. Check the tree: `git status` (stash or finish anything in progress first).
-2. **Sync first, always:** `git pull --rebase origin main`.
-3. Stage and commit your work with a clear message.
+1. Check the tree: `git status`.
+2. **Commit first** (rebase needs a clean tree): stage and commit your work with a clear message.
+3. **Then sync:** `git pull --rebase origin main`.
 4. `git push`.
 5. If the push is rejected (`non-fast-forward`), it means the bot pushed first:
    run `git pull --rebase origin main` again, then `git push`. Repeat if needed.
