@@ -78,7 +78,25 @@
         @media (min-width: 1024px) {
             .lg\:px-8{padding-left:2rem;padding-right:2rem}
         }
-    </style>
+    
+        /* Utilidades reparadas (fix homogenizacion) */
+        .border-collapse{border-collapse:collapse}
+        .divide-gray-200>:not([hidden])~:not([hidden]){border-color:#e5e7eb}
+        .divide-y>:not([hidden])~:not([hidden]){border-top-width:1px}
+        .gap-2\.5{gap:.625rem}
+        .gap-3{gap:.75rem}
+        .hover\:text-padel-800:hover{color:#166534}
+        .justify-center{justify-content:center}
+        .max-w-full{max-width:100%}
+        .mt-16{margin-top:4rem}
+        .pt-12{padding-top:3rem}
+        .pt-5{padding-top:1.25rem}
+        .text-left{text-align:left}
+        @media (min-width: 640px) {
+            .sm\:text-base{font-size:1rem;line-height:1.5rem}
+            .sm\:w-auto{width:auto}
+        }
+</style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>

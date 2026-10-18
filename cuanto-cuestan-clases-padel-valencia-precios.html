@@ -145,7 +145,21 @@
         @media (min-width: 1024px) {
             .lg\:px-8{padding-left:2rem;padding-right:2rem}
         }
-    </style>
+    
+        /* Utilidades reparadas (fix homogenizacion) */
+        .divide-gray-200>:not([hidden])~:not([hidden]){border-color:#e5e7eb}
+        .divide-y>:not([hidden])~:not([hidden]){border-top-width:1px}
+        .font-normal{font-weight:400}
+        .hover\:bg-gray-50:hover{background-color:#f9fafb}
+        .mt-6{margin-top:1.5rem}
+        .my-4{margin-top:1rem;margin-bottom:1rem}
+        .pt-6{padding-top:1.5rem}
+        .space-y-1>:not([hidden])~:not([hidden]){margin-top:.25rem}
+        .space-y-2>:not([hidden])~:not([hidden]){margin-top:.5rem}
+        @media (min-width: 640px) {
+            .sm\:text-sm{font-size:.875rem;line-height:1.25rem}
+        }
+</style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>

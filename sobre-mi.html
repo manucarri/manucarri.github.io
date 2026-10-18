@@ -85,7 +85,16 @@
         @media (min-width: 1024px) {
             .lg\:px-8{padding-left:2rem;padding-right:2rem}
         }
-    </style>
+    
+        /* Utilidades reparadas (fix homogenizacion) */
+        .uppercase{text-transform:uppercase}
+        @media (min-width: 640px) {
+            .sm\:px-0{padding-left:0;padding-right:0}
+        }
+        @media (min-width: 768px) {
+            .md\:aspect-square{aspect-ratio:1/1}
+        }
+</style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>

@@ -191,7 +191,16 @@
         @media (min-width: 1024px) {
             .lg\:px-8{padding-left:2rem;padding-right:2rem}
         }
-    </style>
+    
+        /* Utilidades reparadas (fix homogenizacion) */
+        .divide-gray-200>:not([hidden])~:not([hidden]){border-color:#e5e7eb}
+        .divide-y>:not([hidden])~:not([hidden]){border-top-width:1px}
+        .px-2\.5{padding-left:.625rem;padding-right:.625rem}
+        .space-y-1>:not([hidden])~:not([hidden]){margin-top:.25rem}
+        @media (min-width: 640px) {
+            .sm\:text-sm{font-size:.875rem;line-height:1.25rem}
+        }
+</style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>
