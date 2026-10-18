@@ -140,6 +140,17 @@ push as potentially conflicting and follow this protocol so nothing blocks.
 - If you cannot push (no credentials), say so explicitly and stop — do not leave the repo
   half-committed or retry in a loop.
 
+## Local SEO backlog
+
+- **Google Business Profile: not created yet** (confirmed Oct 2026). When the owner has it, add its
+  URL to `sameAs` in the business JSON-LD (`index.html` / `index-en.html`) and consider
+  `Review` / `AggregateRating` only if the reviews are real and verifiable (Google forbids
+  self-serving reviews for your own business).
+- Business schema already includes: full PostalAddress (Carrer Islas Canarias 43, 46988 Paterna),
+  `geo`, `areaServed` (11 localities), `openingHoursSpecification` (Mon–Fri 10:30–20:30;
+  Sat 09:00–14:00 by appointment), `sameAs` (Instagram, LinkedIn), `founder`, `priceRange` and the
+  `hasOfferCatalog` with the 7 programmes.
+
 ## Verify before finishing (PowerShell)
 
 ```powershell
