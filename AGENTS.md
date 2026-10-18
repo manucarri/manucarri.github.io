@@ -97,10 +97,9 @@ Source documents for these roles: `docs/agentes/01-arquitectura-y-mantenimiento.
 `best-padel-clubs-valencia.html`, `formatos-clases-padel-valencia.html`,
 `video-analisis-grabarse-jugando-padel.html`.
 
-**Known non-compliant files (still pending homogenization):**
-`blog.html` and `blog-en.html` (CDN Tailwind + Lucide),
-`sobre-mi.html` and `about-me.html` (`<i data-lucide>` + `lucide.createIcons()`).
-If you work on these, bring them to the standard.
+**Homogenization status:** all pages are now compliant. `blog.html`, `blog-en.html`, `sobre-mi.html`
+and `about-me.html` were migrated from CDN Tailwind + Lucide to inline critical CSS + inline SVG.
+Keep it that way: every new page must be born compliant.
 
 ## Publishing workflow
 
