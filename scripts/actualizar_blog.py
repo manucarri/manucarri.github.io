@@ -10,6 +10,7 @@ NON_BLOG_PAGES = {
     "blog.html", "blog-en.html",
     "sobre-mi.html", "about-me.html",
     "condiciones.html", "terms.html",
+    "clases-padel-valencia.html", "padel-lessons-valencia.html",
     "404.html", "review-club.html"
 }
 
@@ -116,7 +117,7 @@ def update_blog_index(index_file, posts):
     # Comprobar qué artículos faltan en el listado y añadirlos arriba
     new_cards = []
     for post in sorted(posts, key=lambda x: x["date"], reverse=True):
-        if post["filename"] not in inner_html:
+        if f'href="{post["filename"]}"' not in inner_html:
             new_cards.append(build_blog_card(post))
 
     if new_cards:
