@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://clasespadelvalencia.com/about-me.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,13 +20,13 @@
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/blog-en.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/blog.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/clases-padel-valencia.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -67,6 +67,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://clasespadelvalencia.com/from-tennis-to-padel-without-dying-trying.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://clasespadelvalencia.com/guia-iniciacion-padel.html</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -80,13 +86,13 @@
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/index-en.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -146,7 +152,7 @@
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/padel-lessons-valencia.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -158,13 +164,19 @@
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/sobre-mi.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clasespadelvalencia.com/tecnica-tradicional-padel-estancamiento.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clasespadelvalencia.com/tenis-a-padel-sin-morir-en-el-intento.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
