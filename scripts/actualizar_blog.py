@@ -10,6 +10,7 @@ NON_BLOG_PAGES = {
     "blog.html", "blog-en.html",
     "sobre-mi.html", "about-me.html",
     "condiciones.html", "terms.html",
+    "privacidad.html", "privacy.html",
     "clases-padel-valencia.html", "padel-lessons-valencia.html",
     "404.html", "review-club.html"
 }

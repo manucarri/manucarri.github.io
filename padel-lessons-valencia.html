@@ -171,14 +171,15 @@
         .h-14{height:3.5rem}.w-auto{width:auto}
     </style>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4WB8DKEV"></script>
+    <!-- Google tag (gtag.js) con Consent Mode v2 -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
       gtag('js', new Date());
       gtag('config', 'G-HT4WB8DKEV');
     </script>
+    <script src="consentimiento-cookies.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen overflow-x-hidden w-full">
 
