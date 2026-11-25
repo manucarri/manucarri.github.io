@@ -142,13 +142,26 @@ push as potentially conflicting and follow this protocol so nothing blocks.
 
 ## Local SEO backlog
 
-- **Google Business Profile: not created yet** (confirmed Oct 2026). When the owner has it, add its
-  URL to `sameAs` in the business JSON-LD (`index.html` / `index-en.html`) and consider
-  `Review` / `AggregateRating` only if the reviews are real and verifiable (Google forbids
-  self-serving reviews for your own business).
+- **Google Business Profile: exists** (verified Nov 2026). Name: *Clases Pádel Valencia - Manu Carrilero*
+  (`/g/11zyskk_9p`, cid `6737701610238244773`). 5,0 ★ with 6 real reviews, all answered by the owner.
+  Already wired in the site: `sameAs` and the "Ver las reseñas en Google" button use that cid, and
+  `hasMap` points to the training venue (**Padel Élite 22 Paterna**, `/g/11snlvfs1c`).
+  **Never merge the two entities**: the GBP is Manu's personal brand, Elite 22 is the venue where he
+  coaches. Keep asking for reviews so the flow stays recent. **Do not** add `Review` /
+  `AggregateRating` for our own business: Google forbids self-serving reviews.
+- **Watch (GBP location):** the profile point is at 39.4725/−0.4493, ~5 km from Elite 22
+  (39.5166/−0.4702). The owner **already tried** verifying a physical address and Google rejected it
+  repeatedly (likely because the venue already has its own profile). **Decision (Nov 2026): leave it
+  as a service-area business for now.** Do not reopen the topic; if the owner raises it, the pending
+  step is Settings → Address, showing the Elite 22 address *and* keeping the service area.
+  Meanwhile, compensate without touching the profile: the service-area list **already covers** the
+  relevant localities (Paterna, La Eliana, San Antonio de Benagéber, Bétera, Mas Camarena, Godella,
+  Rocafort, Burjassot, Valencia), so do not repeat that task. What is left is the web: locality landing
+  pages plus a steady flow of new reviews.
 - Business schema already includes: full PostalAddress (Carrer Islas Canarias 43, 46988 Paterna),
   `geo`, `areaServed` (11 localities), `openingHoursSpecification` (Mon–Fri 10:30–20:30;
-  Sat 09:00–14:00 by appointment), `sameAs` (Instagram, LinkedIn), `founder`, `priceRange` and the
+  Sat 09:00–14:00 by appointment), `sameAs` (Instagram, LinkedIn, Google Maps cid `6737701610238244773`),
+  `founder`, `priceRange` and the
   `hasOfferCatalog` with the 7 programmes.
 
 ## Verify before finishing (PowerShell)

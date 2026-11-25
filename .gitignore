@@ -4,6 +4,9 @@ node_modules/
 # Imagenes originales sin optimizar: no se suben al repo, solo sirven de entrada
 img-originales/
 
+# Documentos internos: analisis de competencia, notas privadas. No se suben.
+docs/interno/
+
 # Ruido del sistema
 .DS_Store
 Thumbs.db
